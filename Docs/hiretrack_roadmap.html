@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireTrack-Project</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap");
+
+    :root {
+      --font-sans:
+        "Plus Jakarta Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
+      --color-background-primary: #ffffff;
+      --color-background-secondary: #f7f8fc;
+      --color-background-tertiary: #eef1ff;
+      --color-text-primary: #1d2333;
+      --color-text-secondary: #3b445b;
+      --color-text-tertiary: #677089;
+      --color-border-secondary: #d8def0;
+      --color-border-tertiary: #e6e9f5;
+      --border-radius-md: 12px;
+      --border-radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      line-height: 1.55;
+      color: var(--color-text-primary);
+      background:
+        radial-gradient(circle at 15% 10%, #e8edff 0%, transparent 42%),
+        radial-gradient(circle at 80% 0%, #efe8ff 0%, transparent 36%),
+        linear-gradient(160deg, #f6f8ff 0%, #f3fff9 100%);
+      min-height: 100vh;
+    }
+
+    .root {
+      width: min(1120px, 94vw);
+      margin: 2.25rem auto;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(39, 54, 102, 0.12);
+      padding: 1.5rem;
+    }
+
+    .page-title {
+      font-size: clamp(1.8rem, 1.35rem + 1.2vw, 2.5rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #1e2440;
+      margin-bottom: 0.55rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 1.15rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .ntab {
+      padding: 10px 14px;
+      border: 1px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-md);
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--color-background-primary);
+      color: var(--color-text-secondary);
+      transition: all 0.18s ease;
+      box-shadow: 0 2px 8px rgba(32, 45, 92, 0.05);
+    }
+
+    .ntab:hover {
+      background: var(--color-background-tertiary);
+      transform: translateY(-1px);
+    }
+
+    .ntab.on {
+      color: #eeedfe;
+      border-color: transparent;
+      box-shadow: 0 10px 18px rgba(53, 42, 128, 0.2);
+    }
+
+    .card {
+      background: var(--color-background-primary);
+      border: 1px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 1.35rem;
+      margin-bottom: 10px;
+      box-shadow: 0 10px 24px rgba(44, 64, 110, 0.08);
+    }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .phase-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--color-text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      margin-top: 1rem;
+    }
+
+    .task-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .task {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.98rem;
+      color: var(--color-text-secondary);
+      padding: 10px 12px;
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      border-left: 4px solid rgba(99, 56, 6, 0.18);
+    }
+
+    .task-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .concept-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .tree {
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      line-height: 1.9;
+      color: var(--color-text-secondary);
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 1rem;
+      border: 1px dashed #d8def0;
+    }
+
+    .tree .dir {
+      color: var(--color-text-primary);
+      font-weight: 700;
+    }
+
+    .tree .file {
+      color: var(--color-text-secondary);
+    }
+
+    .tree .ann {
+      color: var(--color-text-tertiary);
+      font-size: 0.75rem;
+    }
+
+    .erd-wrap {
+      overflow-x: auto;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .ask-btn {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 11px;
+      border: 1px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-md);
+      background: var(--color-background-secondary);
+      color: var(--color-text-primary);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.18s ease;
+    }
+
+    .ask-btn:hover {
+      background: var(--color-background-tertiary);
+      transform: translateY(-1px);
+    }
+
+    .time-chip {
+      font-size: 0.76rem;
+      color: var(--color-text-tertiary);
+      border: 1px solid var(--color-border-tertiary);
+      padding: 4px 9px;
+      border-radius: 20px;
+    }
+
+    .schema-table {
+      width: 100%;
+      font-size: 0.82rem;
+      border-collapse: collapse;
+    }
+
+    .schema-table th {
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.72rem;
+      color: var(--color-text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 8px;
+      border-bottom: 1px solid var(--color-border-tertiary);
+    }
+
+    .schema-table td {
+      padding: 6px 8px;
+      color: var(--color-text-secondary);
+      border-bottom: 1px solid var(--color-border-tertiary);
+    }
+
+    .schema-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pk {
+      color: #0f6e56;
+      font-weight: 700;
+    }
+
+    .fk {
+      color: #185fa5;
+    }
+
+    .type {
+      color: var(--color-text-tertiary);
+    }
+
+    .flow-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .flow-box {
+      font-size: 0.78rem;
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .arrow-txt {
+      font-size: 1rem;
+      color: var(--color-text-tertiary);
+    }
+
+    @media (max-width: 720px) {
+      .root {
+        margin: 1rem auto;
+        padding: 1rem;
+      }
+
+      .task {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+  <body>
+    <div class="root">
+      <h1 class="page-title">HireTrack Roadmap</h1>
+      <p class="page-subtitle">
+        Build your hiring platform step-by-step with clear milestones,
+        architecture flow, and backend concepts for each phase.
+      </p>
+      <div class="nav" id="nav"></div>
+      <div id="content"></div>
+    </div>
+    <script>
+      const PHASES = [
+        {
+          id: 0,
+          label: "Phase 1",
+          name: "Setup & Auth",
+          weeks: "1–2 weeks",
+          color: "#3C3489",
+          badgeBg: "#EEEDFE",
+          badgeColor: "#3C3489",
+          dot: "#7F77DD",
+          desc: "Get the project skeleton production-ready before writing any feature code.",
+          tasks: [
+            "Init Next.js 14 (App Router) + TypeScript — strict mode on",
+            "Set up PostgreSQL with pg driver + raw SQL (learn SQL first, add ORM later)",
+            "Install and configure Drizzle ORM — write first migration: users table",
+            "NextAuth v5 — OAuth providers: Google + GitHub",
+            "Role system: ADMIN, RECRUITER, CANDIDATE stored in users.role column",
+            "Zod schemas: loginSchema, registerSchema — reuse on both client and server",
+            "Protect routes with Next.js middleware — redirect unauthenticated users",
+            "Session stored server-side, JWT refresh token rotation",
+            "Seed script: create test users for all 3 roles",
+          ],
+          concepts: [
+            {
+              label: "PostgreSQL + Drizzle migrations",
+              color: "#E1F5EE",
+              tc: "#085041",
+            },
+            { label: "NextAuth OAuth flow", color: "#EEEDFE", tc: "#3C3489" },
+            { label: "Zod schemas (shared)", color: "#FAEEDA", tc: "#633806" },
+            { label: "Next.js middleware", color: "#E6F1FB", tc: "#0C447C" },
+            { label: "RBAC (role column)", color: "#FAECE7", tc: "#712B13" },
+          ],
+          tables: ["users", "accounts", "sessions"],
+          ask: "Explain how to set up NextAuth v5 with Google OAuth and store the role in PostgreSQL using Drizzle ORM in Next.js 14 App Router",
+        },
+        {
+          id: 1,
+          label: "Phase 2",
+          name: "Jobs & Applications",
+          weeks: "2–3 weeks",
+          color: "#085041",
+          badgeBg: "#E1F5EE",
+          badgeColor: "#085041",
+          dot: "#1D9E75",
+          desc: "Build the core domain — companies, jobs, and the application submission flow.",
+          tasks: [
+            "Companies table + recruiter can create/manage their company",
+            "Jobs CRUD — create, edit, publish, close job listings",
+            "Public job board page — candidates browse open listings",
+            "Application form — candidate applies to a job",
+            "Resume PDF upload — store in Supabase Storage or local /uploads",
+            "Zod validation on every API route as a reusable middleware pattern",
+            "Pagination on job listings using LIMIT/OFFSET (then cursor-based)",
+            "Soft deletes — deleted_at column on jobs and applications",
+            "Recruiter can view all applicants for their jobs",
+            "Candidate can view their own application history",
+          ],
+          concepts: [
+            {
+              label: "Relational DB (FK constraints)",
+              color: "#E1F5EE",
+              tc: "#085041",
+            },
+            {
+              label: "Zod middleware pattern",
+              color: "#FAEEDA",
+              tc: "#633806",
+            },
+            {
+              label: "File upload (multipart)",
+              color: "#EEEDFE",
+              tc: "#3C3489",
+            },
+            {
+              label: "Pagination (offset → cursor)",
+              color: "#E6F1FB",
+              tc: "#0C447C",
+            },
+            {
+              label: "Soft deletes + timestamps",
+              color: "#FAECE7",
+              tc: "#712B13",
+            },
+            {
+              label: "Row-level access checks",
+              color: "#EAF3DE",
+              tc: "#27500A",
+            },
+          ],
+          tables: ["companies", "jobs", "applications", "resumes"],
+          ask: "Show me how to build a Zod validation middleware for Next.js 14 API routes that validates request body and returns typed errors",
+        },
+        {
+          id: 2,
+          label: "Phase 3",
+          name: "Kanban Pipeline",
+          weeks: "1–2 weeks",
+          color: "#712B13",
+          badgeBg: "#FAECE7",
+          badgeColor: "#712B13",
+          dot: "#D85A30",
+          desc: "The kanban board is the heart of HireTrack — implement stage transitions with a full audit trail.",
+          tasks: [
+            "Create pipeline_stages table: Applied, Screening, Interview, Offer, Hired, Rejected",
+            "PATCH /api/applications/:id/stage endpoint — moves application between stages",
+            "Every stage move writes a row to audit_logs (who, from, to, when)",
+            "Kanban board UI — columns per stage, drag-and-drop with @dnd-kit/core",
+            "Optimistic UI updates — update client state before server confirms",
+            "Application detail drawer — show full history of stage changes",
+            "Bulk actions — reject multiple candidates at once",
+            "Notes/comments on an application — recruiter-only internal notes",
+          ],
+          concepts: [
+            {
+              label: "Database transactions (atomic stage move)",
+              color: "#FAECE7",
+              tc: "#712B13",
+            },
+            { label: "Audit log pattern", color: "#E1F5EE", tc: "#085041" },
+            {
+              label: "Optimistic updates (SWR/React Query)",
+              color: "#EEEDFE",
+              tc: "#3C3489",
+            },
+            {
+              label: "State machine (valid transitions)",
+              color: "#FAEEDA",
+              tc: "#633806",
+            },
+            {
+              label: "Drag-and-drop (@dnd-kit)",
+              color: "#E6F1FB",
+              tc: "#0C447C",
+            },
+          ],
+          tables: ["pipeline_stages", "audit_logs", "application_notes"],
+          flow: [
+            "Applied",
+            "Screening",
+            "Interview",
+            "Offer",
+            "Hired / Rejected",
+          ],
+          ask: "How do I implement a database transaction in PostgreSQL with Drizzle ORM to atomically move an application to a new stage and write an audit log row at the same time?",
+        },
+        {
+          id: 3,
+          label: "Phase 4",
+          name: "Jobs, Crons & Redis",
+          weeks: "2 weeks",
+          color: "#633806",
+          badgeBg: "#FAEEDA",
+          badgeColor: "#633806",
+          dot: "#BA7517",
+          desc: "This is where you learn the most advanced backend patterns — queues, workers, scheduled jobs, and caching.",
+          tasks: [
+            "Install Redis locally (Docker) + ioredis client",
+            "Install BullMQ — set up a queue instance and a worker process",
+            "Background job: when resume uploaded, parse PDF text (pdf-parse) → store parsed text in DB",
+            "Background job: send email via Resend/Nodemailer — never block HTTP request for emails",
+            "Email queue: interview scheduled → queue email to candidate + recruiter",
+            "Cron with node-cron: every day at 8am → find interviews happening tomorrow → queue reminder emails",
+            "Cron: every Monday 9am → send weekly digest to each recruiter (# applicants, stage breakdown)",
+            "Redis cache: cache job listing page (TTL 5 min) — invalidate on job update",
+            "Redis rate limiting: max 10 applications per candidate per hour using sliding window",
+            "Dead letter queue — failed jobs after 3 retries → move to failed queue + alert admin",
+          ],
+          concepts: [
+            {
+              label: "BullMQ queues + workers",
+              color: "#FAEEDA",
+              tc: "#633806",
+            },
+            { label: "Redis (ioredis)", color: "#FAECE7", tc: "#712B13" },
+            { label: "Cron jobs (node-cron)", color: "#E1F5EE", tc: "#085041" },
+            {
+              label: "Cache invalidation strategy",
+              color: "#EEEDFE",
+              tc: "#3C3489",
+            },
+            {
+              label: "Rate limiting (sliding window)",
+              color: "#E6F1FB",
+              tc: "#0C447C",
+            },
+            {
+              label: "Dead letter queue + retries",
+              color: "#EAF3DE",
+              tc: "#27500A",
+            },
+            { label: "Email queue pattern", color: "#FCEBEB", tc: "#791F1F" },
+          ],
+          tables: ["job_queue_logs", "email_logs"],
+          ask: "Show me how to set up BullMQ with Redis and a worker process in a Next.js project, with a job for parsing a PDF resume and sending a confirmation email",
+        },
+        {
+          id: 4,
+          label: "Phase 5",
+          name: "Search & Analytics",
+          weeks: "2 weeks",
+          color: "#0C447C",
+          badgeBg: "#E6F1FB",
+          badgeColor: "#0C447C",
+          dot: "#378ADD",
+          desc: "Polish the product with search, analytics, and admin tooling — the features that make it feel real.",
+          tasks: [
+            "Enable pg_trgm extension — full-text search on resume parsed_text and job descriptions",
+            "Search bar: candidates search jobs, recruiters search applicants by name/skill",
+            "GIN index on searchable columns for fast trigram queries",
+            "Analytics dashboard: conversion funnel (Applied → Hired %), avg time per stage",
+            "Time-to-hire metric: calculate per-job using audit_log timestamps",
+            "Admin panel: view all users, impersonate, manually change roles",
+            "Interview scheduling: create interview slots, candidate picks a time (simple slot model)",
+            "Calendar integration: generate .ics file for interview events",
+            "Export: recruiter downloads applicant list as CSV (streamed response)",
+            "Error monitoring: Sentry + structured logging with Pino",
+          ],
+          concepts: [
+            {
+              label: "pg_trgm full-text search",
+              color: "#E6F1FB",
+              tc: "#0C447C",
+            },
+            { label: "GIN indexes", color: "#EEEDFE", tc: "#3C3489" },
+            {
+              label: "Aggregation queries (GROUP BY)",
+              color: "#E1F5EE",
+              tc: "#085041",
+            },
+            { label: "Streamed CSV response", color: "#FAEEDA", tc: "#633806" },
+            {
+              label: "Structured logging (Pino)",
+              color: "#FAECE7",
+              tc: "#712B13",
+            },
+            { label: "Slot-based scheduling", color: "#EAF3DE", tc: "#27500A" },
+          ],
+          tables: ["interview_slots", "search_index"],
+          ask: "How do I implement full-text search in PostgreSQL using pg_trgm with a GIN index in a Next.js app with Drizzle ORM?",
+        },
+        {
+          id: 5,
+          label: "Schema",
+          name: "DB Schema",
+          weeks: null,
+          color: "#444441",
+          badgeBg: "#F1EFE8",
+          badgeColor: "#444441",
+          dot: "#888780",
+          desc: "Core tables. Every FK has ON DELETE CASCADE or SET NULL — never orphan rows.",
+          schema: true,
+        },
+        {
+          id: 6,
+          label: "Folders",
+          name: "Folder Structure",
+          weeks: null,
+          color: "#444441",
+          badgeBg: "#F1EFE8",
+          badgeColor: "#444441",
+          dot: "#888780",
+          desc: "Keep feature code co-located. lib/ is pure logic, app/ is Next.js routing only.",
+          folder: true,
+        },
+      ];
+
+      const SCHEMA_TABLES = [
+        {
+          name: "users",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "email", t: "text UNIQUE" },
+            { n: "name", t: "text" },
+            { n: "role", t: "enum: ADMIN | RECRUITER | CANDIDATE" },
+            { n: "avatar_url", t: "text" },
+            { n: "created_at", t: "timestamptz" },
+            { n: "deleted_at", t: "timestamptz nullable" },
+          ],
+        },
+        {
+          name: "companies",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "owner_id", t: "uuid FK → users.id", k: "fk" },
+            { n: "name", t: "text" },
+            { n: "slug", t: "text UNIQUE" },
+            { n: "logo_url", t: "text" },
+            { n: "created_at", t: "timestamptz" },
+          ],
+        },
+        {
+          name: "jobs",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "company_id", t: "uuid FK → companies.id", k: "fk" },
+            { n: "title", t: "text" },
+            { n: "description", t: "text" },
+            { n: "status", t: "enum: DRAFT | OPEN | CLOSED" },
+            { n: "deleted_at", t: "timestamptz nullable" },
+          ],
+        },
+        {
+          name: "applications",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "job_id", t: "uuid FK → jobs.id", k: "fk" },
+            { n: "candidate_id", t: "uuid FK → users.id", k: "fk" },
+            { n: "current_stage", t: "text" },
+            { n: "resume_url", t: "text" },
+            { n: "parsed_resume", t: "text (from bg job)" },
+            { n: "created_at", t: "timestamptz" },
+          ],
+        },
+        {
+          name: "audit_logs",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "application_id", t: "uuid FK → applications.id", k: "fk" },
+            { n: "changed_by", t: "uuid FK → users.id", k: "fk" },
+            { n: "from_stage", t: "text" },
+            { n: "to_stage", t: "text" },
+            { n: "changed_at", t: "timestamptz" },
+          ],
+        },
+        {
+          name: "interviews",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "application_id", t: "uuid FK → applications.id", k: "fk" },
+            { n: "scheduled_at", t: "timestamptz" },
+            { n: "type", t: "enum: PHONE | VIDEO | ONSITE" },
+            { n: "reminder_sent", t: "boolean default false" },
+          ],
+        },
+        {
+          name: "email_logs",
+          cols: [
+            { n: "id", t: "uuid PK", k: "pk" },
+            { n: "to_email", t: "text" },
+            { n: "template", t: "text" },
+            { n: "status", t: "enum: QUEUED | SENT | FAILED" },
+            { n: "sent_at", t: "timestamptz nullable" },
+          ],
+        },
+      ];
+
+      const FOLDER = `hiretrack/
+├── app/
+│   ├── (auth)/
+│   │   ├── login/page.tsx
+│   │   └── register/page.tsx
+│   ├── (dashboard)/
+│   │   ├── layout.tsx          ← auth guard here
+│   │   ├── pipeline/page.tsx   ← kanban board
+│   │   ├── jobs/
+│   │   │   ├── page.tsx
+│   │   │   └── [id]/page.tsx
+│   │   ├── applications/
+│   │   │   └── [id]/page.tsx
+│   │   └── analytics/page.tsx
+│   ├── api/
+│   │   ├── auth/[...nextauth]/route.ts
+│   │   ├── jobs/
+│   │   │   ├── route.ts        ← GET list, POST create
+│   │   │   └── [id]/route.ts   ← GET, PATCH, DELETE
+│   │   ├── applications/
+│   │   │   ├── route.ts
+│   │   │   └── [id]/
+│   │   │       ├── route.ts
+│   │   │       └── stage/route.ts ← PATCH stage
+│   │   └── upload/route.ts
+│   └── layout.tsx
+│
+├── lib/
+│   ├── db/
+│   │   ├── index.ts            ← drizzle client
+│   │   ├── schema.ts           ← all table definitions
+│   │   ├── queries/
+│   │   │   ├── jobs.ts
+│   │   │   ├── applications.ts
+│   │   │   └── users.ts
+│   │   └── migrations/         ← drizzle-kit output
+│   ├── redis/
+│   │   └── index.ts            ← ioredis singleton
+│   ├── queue/
+│   │   ├── index.ts            ← BullMQ queue setup
+│   │   ├── worker.ts           ← worker process entry
+│   │   └── jobs/
+│   │       ├── parseResume.ts
+│   │       └── sendEmail.ts
+│   ├── cron/
+│   │   ├── index.ts            ← register all crons
+│   │   ├── interviewReminders.ts
+│   │   └── weeklyDigest.ts
+│   ├── email/
+│   │   ├── index.ts            ← Resend/Nodemailer client
+│   │   └── templates/
+│   │       ├── interviewReminder.tsx
+│   │       └── weeklyDigest.tsx
+│   ├── validations/
+│   │   ├── job.schema.ts
+│   │   ├── application.schema.ts
+│   │   └── auth.schema.ts
+│   └── utils/
+│       ├── rateLimit.ts        ← Redis sliding window
+│       └── cache.ts            ← cache helpers
+│
+├── components/
+│   ├── kanban/
+│   ├── forms/
+│   └── ui/
+│
+├── middleware.ts               ← route protection
+├── worker.ts                   ← separate process: node worker.ts
+└── drizzle.config.ts`;
+
+      let active = 0;
+      function renderNav() {
+        document.getElementById("nav").innerHTML = PHASES.map(
+          (p) =>
+            `<button class="ntab ${p.id === active ? "on" : ""}" style="${p.id === active ? `background:${p.color};border-color:${p.color}` : ""}" onclick="go(${p.id})">${p.label}: ${p.name}</button>`,
+        ).join("");
+      }
+      function renderContent() {
+        const p = PHASES[active];
+        let html = `<div class="card">
+    <div class="phase-header">
+      <span class="phase-badge" style="background:${p.badgeBg};color:${p.badgeColor}">${p.label}</span>
+      <span style="font-size:16px;font-weight:500;color:var(--color-text-primary)">${p.name}</span>
+      ${p.weeks ? `<span class="time-chip">${p.weeks}</span>` : ""}
+    </div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:12px">${p.desc}</p>`;
+
+        if (p.folder) {
+          html += `<pre class="tree">${FOLDER.split("\n")
+            .map((line) => {
+              if (line.includes("←"))
+                return line.replace(/(←.*)/, '<span class="ann">$1</span>');
+              if (line.match(/\/$/) || line.match(/\/\s*$/))
+                return `<span class="dir">${line}</span>`;
+              return `<span class="file">${line}</span>`;
+            })
+            .join("\n")}</pre>`;
+          html += `<button class="ask-btn" onclick="sendPrompt('Explain the lib/queue/worker.ts setup — how do I run BullMQ workers as a separate process alongside Next.js, and how do I restart them in production?')">How do I run the BullMQ worker as a separate process? ↗</button>`;
+          html += `</div>`;
+          document.getElementById("content").innerHTML = html;
+          return;
+        }
+
+        if (p.schema) {
+          html += `<div class="two-col">`;
+          SCHEMA_TABLES.forEach((t) => {
+            html += `<div style="margin-bottom:10px"><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;font-family:var(--font-mono)">${t.name}</div>
+      <table class="schema-table"><thead><tr><th>column</th><th>type / notes</th></tr></thead><tbody>`;
+            t.cols.forEach((c) => {
+              const nc =
+                c.k === "pk"
+                  ? `<span class="pk">${c.n}</span>`
+                  : c.k === "fk"
+                    ? `<span class="fk">${c.n}</span>`
+                    : `<span>${c.n}</span>`;
+              html += `<tr><td>${nc}</td><td class="type">${c.t}</td></tr>`;
+            });
+            html += `</tbody></table></div>`;
+          });
+          html += `</div>`;
+          html += `<div style="margin-top:12px;font-size:12px;color:var(--color-text-tertiary);display:flex;gap:16px">
+      <span><span class="pk" style="font-family:var(--font-mono)">green</span> = primary key</span>
+      <span><span class="fk" style="font-family:var(--font-mono)">blue</span> = foreign key</span>
+    </div>`;
+          html += `<button class="ask-btn" style="margin-top:1rem" onclick="sendPrompt('Write the complete Drizzle ORM schema.ts file for HireTrack with all these tables: users, companies, jobs, applications, audit_logs, interviews, email_logs — with proper TypeScript types and relations')">Generate the Drizzle schema.ts file ↗</button>`;
+          html += `</div>`;
+          document.getElementById("content").innerHTML = html;
+          return;
+        }
+
+        if (p.tasks) {
+          html += `<div class="section-title">tasks to build</div>
+    <ul class="task-list">`;
+          p.tasks.forEach((t) => {
+            html += `<li class="task"><span class="task-dot" style="background:${p.dot}"></span>${t}</li>`;
+          });
+          html += `</ul>`;
+        }
+
+        if (p.flow) {
+          html += `<div class="section-title">pipeline state machine</div>
+    <div class="flow-row">`;
+          p.flow.forEach((s, i) => {
+            html += `<span class="flow-box" style="background:${p.badgeBg};color:${p.badgeColor}">${s}</span>`;
+            if (i < p.flow.length - 1)
+              html += `<span class="arrow-txt">→</span>`;
+          });
+          html += `</div>`;
+        }
+
+        if (p.concepts) {
+          html += `<div class="section-title">backend concepts you'll learn here</div>
+    <div class="concept-row">`;
+          p.concepts.forEach((c) => {
+            html += `<span class="badge" style="background:${c.color};color:${c.tc}">${c.label}</span>`;
+          });
+          html += `</div>`;
+        }
+
+        if (p.tables) {
+          html += `<div class="section-title">new db tables</div>
+    <div class="concept-row">`;
+          p.tables.forEach((t) => {
+            html += `<code style="font-size:12px;padding:3px 8px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);color:var(--color-text-secondary)">${t}</code>`;
+          });
+          html += `</div>`;
+        }
+
+        if (p.ask) {
+          html += `<button class="ask-btn" onclick="sendPrompt('${p.ask.replace(/'/g, "\\'")}')">Deep-dive: ${p.ask.substring(0, 60)}... ↗</button>`;
+        }
+        html += `</div>`;
+        document.getElementById("content").innerHTML = html;
+      }
+      function go(i) {
+        active = i;
+        renderNav();
+        renderContent();
+      }
+      renderNav();
+      renderContent();
+    </script>
+  </body>
+</html>

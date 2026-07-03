@@ -1,0 +1,11 @@
+import express from "express";
+import { protect, restrictTo } from "../controllers/authController";
+import { getAllApplications, createApplication, checkApplicationStatus, updateApplication, getApplication, changeApplicationStatus, getApplicationsByUserId } from "../controllers/jobApplicationsController";
+const router = express.Router();
+router.use(protect);
+router.route("/").get(getAllApplications);
+router.route("/create").post(restrictTo("ADMIN", "CANDIDATE"), createApplication);
+router.route("/:applicationId").get(getApplication).patch(restrictTo("ADMIN", "CANDIDATE"), updateApplication);
+router.route("/user/:userId").get(restrictTo("ADMIN", "CANDIDATE"), getApplicationsByUserId);
+router.route("/status/:applicationId").get(checkApplicationStatus).patch(restrictTo("ADMIN", "RECRUITER"), changeApplicationStatus);
+export default router; 

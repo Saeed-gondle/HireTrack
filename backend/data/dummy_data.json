@@ -1,0 +1,1038 @@
+{
+  "users": [
+    {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Senior Technical Recruiter with 8 years of experience in the IT industry.",
+      "skills": ["Talent Acquisition", "Interviewing", "ATS Systems", "Sourcing"],
+      "educations": ["B.Sc. Human Resources, University of Texas (2016)"],
+      "experiences": ["Recruiter at TechCorp (2016-2020)", "Senior Recruiter at Nexus Labs (2020-Present)"]
+    },
+    {
+      "name": "Bob Martinez",
+      "email": "bob.martinez@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "HR specialist focused on building high-performance engineering teams.",
+      "skills": ["HR Management", "Team Building", "Compensation & Benefits"],
+      "educations": ["MBA, Harvard Business School (2014)"],
+      "experiences": ["HR Manager at StartupXYZ (2014-2018)", "Head of People at Cloudify (2018-Present)"]
+    },
+    {
+      "name": "Carol White",
+      "email": "carol.white@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Passionate about connecting great talent with the right opportunities.",
+      "skills": ["Recruiting", "LinkedIn Sourcing", "Behavioral Interviews"],
+      "educations": ["B.A. Psychology, Columbia University (2017)"],
+      "experiences": ["Associate Recruiter at PeopleFirst (2017-2020)", "Talent Partner at InnovateCo (2020-Present)"]
+    },
+    {
+      "name": "Diana Patel",
+      "email": "diana.patel@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Finance industry recruiter with deep expertise in banking and capital markets hiring.",
+      "skills": ["Finance Recruiting", "CFA Talent Search", "Executive Search", "Headhunting"],
+      "educations": ["B.Sc. Finance, Wharton School (2015)"],
+      "experiences": ["Associate at Goldman Sachs Recruiting (2015-2018)", "Head of Talent at FinEdge Capital (2018-Present)"]
+    },
+    {
+      "name": "Edward Chen",
+      "email": "edward.chen@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Building people-first cultures through strategic HR recruiting.",
+      "skills": ["HRIS", "Org Design", "Talent Pipeline", "Employee Relations"],
+      "educations": ["M.Sc. Organizational Psychology, NYU (2016)"],
+      "experiences": ["HR Coordinator at PeopleFirst (2016-2019)", "Talent Lead at PeopleFirst HR (2019-Present)"]
+    },
+    {
+      "name": "Fiona Scott",
+      "email": "fiona.scott@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Marketing and creative industry recruiter. Expert in sourcing top-tier brand and growth talent.",
+      "skills": ["Creative Recruiting", "Growth Marketing Talent", "Brand Staffing"],
+      "educations": ["B.A. Communications, USC (2014)"],
+      "experiences": ["Recruiter at AdAgency (2014-2017)", "Head of Talent at MarketMasters (2017-Present)"]
+    },
+    {
+      "name": "George Harris",
+      "email": "george.harris@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Sales talent specialist. I know what it takes to build a world-class revenue team.",
+      "skills": ["Sales Hiring", "Commission Structures", "Quota Assessment", "SDR Recruiting"],
+      "educations": ["B.B.A. Sales Management, Ohio State (2013)"],
+      "experiences": ["Sales Manager at RevCo (2013-2016)", "Sales Recruiter at SalesPro (2016-Present)"]
+    },
+    {
+      "name": "Helen Garcia",
+      "email": "helen.garcia@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Operations and logistics recruiter helping businesses find efficiency experts.",
+      "skills": ["Operations Recruiting", "Lean Six Sigma Talent", "Supply Chain Staffing"],
+      "educations": ["B.Sc. Industrial Engineering, Purdue (2015)"],
+      "experiences": ["Operations Analyst at LogiFlow (2015-2018)", "Ops Talent Lead at OpsFlow Solutions (2018-Present)"]
+    },
+    {
+      "name": "Ivan Lopez",
+      "email": "ivan.lopez@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Customer experience advocate and recruiter finding support heroes for fast-growing companies.",
+      "skills": ["CX Recruiting", "CSAT Talent", "Helpdesk Hiring", "Support Team Building"],
+      "educations": ["B.A. Business Administration, Florida State (2016)"],
+      "experiences": ["CX Lead at SupportFirst (2016-2019)", "Recruiter at SupportHub (2019-Present)"]
+    },
+    {
+      "name": "Julia Roberts",
+      "email": "julia.roberts.hr@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Engineering recruiter specializing in civil, mechanical, and structural engineering roles.",
+      "skills": ["Engineering Hiring", "PE License Assessment", "CAD Talent", "Project Engineer Sourcing"],
+      "educations": ["B.Sc. Civil Engineering, UT Austin (2014)"],
+      "experiences": ["Site Engineer at BuildCo (2014-2017)", "Engineering Recruiter at BuildRight (2017-Present)"]
+    },
+    {
+      "name": "Kevin Turner",
+      "email": "kevin.turner@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Legal recruiting professional with a background in corporate law.",
+      "skills": ["Legal Hiring", "Attorney Sourcing", "Bar Admission Screening", "Legal Ops Talent"],
+      "educations": ["J.D., Georgetown University Law Center (2013)"],
+      "experiences": ["Associate Attorney at BigLaw LLP (2013-2016)", "Legal Recruiter at LegalEagle (2016-Present)"]
+    },
+    {
+      "name": "Laura Adams",
+      "email": "laura.adams@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Administrative staffing expert matching EA and admin talent with C-suite executives.",
+      "skills": ["EA Recruiting", "Office Staffing", "Executive Search", "Admin Talent"],
+      "educations": ["B.A. Business Management, Arizona State (2015)"],
+      "experiences": ["Office Manager at Corp HQ (2015-2018)", "Admin Recruiter at AdminPro Services (2018-Present)"]
+    },
+    {
+      "name": "Mark Wilson",
+      "email": "mark.wilson@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Supply chain and logistics recruitment specialist with global sourcing experience.",
+      "skills": ["Supply Chain Hiring", "APICS CPIM Screening", "Procurement Talent", "3PL Sourcing"],
+      "educations": ["B.Sc. Supply Chain Management, Michigan State (2014)"],
+      "experiences": ["Logistics Analyst at GlobalShip (2014-2017)", "Supply Chain Recruiter at SupplyChain Global (2017-Present)"]
+    },
+    {
+      "name": "Nancy Baker",
+      "email": "nancy.baker@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Education sector recruiter placing trainers, curriculum designers, and instructional leads.",
+      "skills": ["EdTech Hiring", "L&D Recruiting", "Instructional Design Talent", "Corporate Training Staffing"],
+      "educations": ["M.Ed. Curriculum & Instruction, University of Michigan (2015)"],
+      "experiences": ["Instructional Designer at LearnCo (2015-2018)", "Recruiter at EduPath Academy (2018-Present)"]
+    },
+    {
+      "name": "Oscar Young",
+      "email": "oscar.young@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Healthcare industry recruiting professional with deep understanding of clinical and health IT roles.",
+      "skills": ["Healthcare Hiring", "Clinical Staff Sourcing", "EMR Talent", "HIPAA Compliance Screening"],
+      "educations": ["B.Sc. Health Information Management, UIC (2014)"],
+      "experiences": ["Health IT Analyst at MedSolutions (2014-2017)", "Recruiter at MediCore Health (2017-Present)"]
+    },
+    {
+      "name": "Patricia King",
+      "email": "patricia.king@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "R&D talent acquisition expert helping labs find brilliant scientific minds.",
+      "skills": ["Scientific Recruiting", "PhD Sourcing", "Lab Staffing", "IP Sensitivity Screening"],
+      "educations": ["M.Sc. Biochemistry, Johns Hopkins University (2013)"],
+      "experiences": ["Research Associate at PharmaCo (2013-2016)", "R&D Recruiter at R&D Innovations Lab (2016-Present)"]
+    },
+    {
+      "name": "Quinn Carter",
+      "email": "quinn.carter@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Management consulting recruiter with experience sourcing MBAs and strategy professionals.",
+      "skills": ["Consulting Hiring", "Case Interview Coaching", "MBA Sourcing", "Strategy Talent"],
+      "educations": ["MBA, Kellogg School of Management (2014)"],
+      "experiences": ["Consultant at McKinsey (2014-2018)", "Talent Lead at ConsultPro Group (2018-Present)"]
+    },
+    {
+      "name": "Rachel Green",
+      "email": "rachel.green@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Project management staffing specialist experienced in PMP and Agile talent placement.",
+      "skills": ["PM Hiring", "Agile Talent", "PMP Screening", "Scrum Master Sourcing"],
+      "educations": ["B.Sc. Project Management, Drexel University (2016)"],
+      "experiences": ["PM Coordinator at BuildFlow (2016-2019)", "Recruiter at ProjectFlow (2019-Present)"]
+    },
+    {
+      "name": "Samuel Brooks",
+      "email": "samuel.brooks@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Business development recruiter helping growth-stage companies build strategic partnership teams.",
+      "skills": ["BD Hiring", "Partnership Talent", "Enterprise Sales Recruiting", "GTM Staffing"],
+      "educations": ["B.B.A. Entrepreneurship, Babson College (2015)"],
+      "experiences": ["BD Rep at GrowthVenture (2015-2018)", "Talent Advisor at BizDev Partners (2018-Present)"]
+    },
+    {
+      "name": "Tina Foster",
+      "email": "tina.foster@example.com",
+      "role": "RECRUITER",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Generalist recruiter placing talent across diverse functions and emerging fields.",
+      "skills": ["Generalist Recruiting", "Startup Hiring", "Non-profit Staffing", "Community Roles"],
+      "educations": ["B.A. Sociology, Boston University (2017)"],
+      "experiences": ["HR Assistant at NonProfitOrg (2017-2019)", "Recruiter at OtherWorks (2019-Present)"]
+    },
+    {
+      "name": "David Lee",
+      "email": "david.lee@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Full-stack developer passionate about scalable web applications.",
+      "skills": ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"],
+      "educations": ["B.Sc. Computer Science, MIT (2020)"],
+      "experiences": ["Junior Dev at WebWorks (2020-2022)", "Mid-Level Dev at CodeBase (2022-Present)"]
+    },
+    {
+      "name": "Emma Davis",
+      "email": "emma.davis@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "UI/UX Designer with a keen eye for detail and user-centric design.",
+      "skills": ["Figma", "Adobe XD", "User Research", "Prototyping", "CSS"],
+      "educations": ["B.F.A. Design, Parsons School of Design (2019)"],
+      "experiences": ["UX Designer at PixelLab (2019-2021)", "Product Designer at DesignHub (2021-Present)"]
+    },
+    {
+      "name": "Frank Wilson",
+      "email": "frank.wilson@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Data scientist specializing in machine learning and predictive analytics.",
+      "skills": ["Python", "TensorFlow", "Scikit-learn", "SQL", "Data Visualization"],
+      "educations": ["M.Sc. Data Science, Stanford University (2021)"],
+      "experiences": ["Data Analyst at InsightCo (2021-2023)", "Data Scientist at AI Ventures (2023-Present)"]
+    },
+    {
+      "name": "Grace Kim",
+      "email": "grace.kim@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Backend engineer with deep expertise in distributed systems.",
+      "skills": ["Go", "Kubernetes", "gRPC", "Redis", "AWS"],
+      "educations": ["B.Sc. Software Engineering, Carnegie Mellon (2018)"],
+      "experiences": ["Backend Engineer at CloudBase (2018-2021)", "Senior SWE at DistributedIO (2021-Present)"]
+    },
+    {
+      "name": "Henry Brown",
+      "email": "henry.brown@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "DevOps engineer focused on CI/CD pipelines and infrastructure automation.",
+      "skills": ["Terraform", "Jenkins", "Docker", "AWS", "Linux"],
+      "educations": ["B.Sc. Information Technology, Georgia Tech (2019)"],
+      "experiences": ["Systems Admin at NetSolutions (2019-2021)", "DevOps Engineer at PipelinePro (2021-Present)"]
+    },
+    {
+      "name": "Isabella Thomas",
+      "email": "isabella.thomas@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Marketing specialist with expertise in digital campaigns and brand strategy.",
+      "skills": ["SEO", "Google Ads", "Content Marketing", "Analytics", "Social Media"],
+      "educations": ["B.Sc. Marketing, Northwestern University (2020)"],
+      "experiences": ["Marketing Coordinator at BrandBoost (2020-2022)", "Digital Marketing Specialist at GrowthHQ (2022-Present)"]
+    },
+    {
+      "name": "James Anderson",
+      "email": "james.anderson@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": false,
+      "bio": "Mobile developer specializing in cross-platform React Native apps.",
+      "skills": ["React Native", "iOS", "Android", "TypeScript", "Firebase"],
+      "educations": ["B.Sc. Computer Engineering, UCLA (2021)"],
+      "experiences": ["Mobile Dev Intern at AppFactory (2021)", "Junior Mobile Developer at MobileFirst (2021-Present)"]
+    },
+    {
+      "name": "Kyle Robinson",
+      "email": "kyle.robinson@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "CFA-level financial analyst with expertise in equity research and portfolio management.",
+      "skills": ["Financial Modeling", "Bloomberg Terminal", "Excel", "Valuation", "Risk Analysis"],
+      "educations": ["B.Sc. Finance, NYU Stern (2019)", "CFA Level II Candidate"],
+      "experiences": ["Investment Banking Analyst at JPMorgan (2019-2022)", "Equity Research Associate at FinEdge (2022-Present)"]
+    },
+    {
+      "name": "Linda Clark",
+      "email": "linda.clark@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "B2B SaaS sales professional with a proven track record of exceeding quota.",
+      "skills": ["Salesforce CRM", "Cold Outreach", "Negotiation", "Pipeline Management", "HubSpot"],
+      "educations": ["B.B.A. Marketing, University of Georgia (2018)"],
+      "experiences": ["SDR at SaaSify (2018-2020)", "Account Executive at ScaleUp Inc (2020-Present)"]
+    },
+    {
+      "name": "Michael Evans",
+      "email": "michael.evans@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Operations manager with Lean Six Sigma Black Belt expertise and a passion for process efficiency.",
+      "skills": ["Lean Six Sigma", "Process Mapping", "ERP Systems", "KPI Dashboards", "Team Leadership"],
+      "educations": ["B.Sc. Operations Management, Indiana University (2017)"],
+      "experiences": ["Process Analyst at ManufactureCo (2017-2020)", "Operations Manager at EfficiencyHub (2020-Present)"]
+    },
+    {
+      "name": "Nina Walker",
+      "email": "nina.walker@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Customer success manager who turns struggling clients into raving fans.",
+      "skills": ["Zendesk", "Customer Onboarding", "Churn Reduction", "NPS", "Intercom"],
+      "educations": ["B.A. Communications, University of Washington (2018)"],
+      "experiences": ["Support Specialist at HelpFirst (2018-2020)", "CSM at SupportHub Corp (2020-Present)"]
+    },
+    {
+      "name": "Oliver Hall",
+      "email": "oliver.hall@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Mechanical engineer with expertise in product design and manufacturing processes.",
+      "skills": ["AutoCAD", "SolidWorks", "FEA Analysis", "GD&T", "DFMEA"],
+      "educations": ["B.Sc. Mechanical Engineering, University of Michigan (2019)"],
+      "experiences": ["Design Engineer at PartsCo (2019-2022)", "Mechanical Engineer at BuildRight (2022-Present)"]
+    },
+    {
+      "name": "Penelope Young",
+      "email": "penelope.young@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Corporate attorney specializing in M&A, contracts, and regulatory compliance.",
+      "skills": ["Contract Drafting", "M&A Due Diligence", "Regulatory Compliance", "IP Law", "SEC Filings"],
+      "educations": ["J.D., Yale Law School (2018)"],
+      "experiences": ["Associate at Skadden LLP (2018-2021)", "Corporate Counsel at LegalEagle Partners (2021-Present)"]
+    },
+    {
+      "name": "Ryan Mitchell",
+      "email": "ryan.mitchell@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "PMP-certified project manager with deep experience in enterprise software delivery.",
+      "skills": ["PMP", "JIRA", "MS Project", "Stakeholder Management", "Risk Management"],
+      "educations": ["B.Sc. Business Information Systems, Penn State (2016)"],
+      "experiences": ["PM at EnterpriseIT (2016-2019)", "Senior PM at ProjectFlow Solutions (2019-Present)"]
+    },
+    {
+      "name": "Sophia Carter",
+      "email": "sophia.carter@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Healthcare IT specialist with a passion for improving patient outcomes through technology.",
+      "skills": ["Epic EMR", "HL7 FHIR", "Healthcare Analytics", "HIPAA", "SQL"],
+      "educations": ["B.Sc. Health Informatics, University of Illinois (2019)"],
+      "experiences": ["Health IT Analyst at RegionalHospital (2019-2022)", "Clinical Systems Specialist at MediCore (2022-Present)"]
+    },
+    {
+      "name": "Aaron Price",
+      "email": "aaron.price@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Supply chain analyst with expertise in demand forecasting and vendor management.",
+      "skills": ["SAP SCM", "Demand Planning", "Procurement", "Inventory Management", "Power BI"],
+      "educations": ["B.Sc. Supply Chain & Logistics, Ohio State University (2020)"],
+      "experiences": ["Supply Chain Coordinator at GlobalShip (2020-2022)", "Supply Chain Analyst at SupplyChain Global (2022-Present)"]
+    },
+    {
+      "name": "Brianna Hughes",
+      "email": "brianna.hughes@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Instructional designer and corporate trainer building high-impact learning programs.",
+      "skills": ["Articulate 360", "LMS Administration", "Needs Analysis", "eLearning Design", "Facilitation"],
+      "educations": ["M.Ed. Instructional Technology, Arizona State (2019)"],
+      "experiences": ["eLearning Developer at CorpLearn (2019-2021)", "Corporate Trainer at EduPath Academy (2021-Present)"]
+    },
+    {
+      "name": "Carlos Rivera",
+      "email": "carlos.rivera@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Research scientist specializing in applied machine learning and NLP.",
+      "skills": ["Python", "PyTorch", "NLP", "Statistical Modeling", "Research Publication"],
+      "educations": ["Ph.D. Computer Science (AI/ML), UC Berkeley (2021)"],
+      "experiences": ["Research Intern at DeepMind (2020)", "Research Scientist at R&D Innovations Lab (2021-Present)"]
+    },
+    {
+      "name": "Diana Nguyen",
+      "email": "diana.nguyen@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Strategy consultant with expertise in market entry, competitive analysis, and operational efficiency.",
+      "skills": ["Strategy", "Financial Modeling", "Market Research", "PowerPoint", "Business Cases"],
+      "educations": ["MBA, London Business School (2019)"],
+      "experiences": ["Consultant at Bain & Company (2019-2022)", "Strategy Lead at ConsultPro Group (2022-Present)"]
+    },
+    {
+      "name": "Ethan Morris",
+      "email": "ethan.morris@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": false,
+      "bio": "Business development professional focused on enterprise partnerships and strategic alliances.",
+      "skills": ["Partner Prospecting", "Contract Negotiation", "GTM Strategy", "CRM", "Executive Presentations"],
+      "educations": ["B.B.A. International Business, Georgetown (2018)"],
+      "experiences": ["BD Associate at Alliance Corp (2018-2021)", "Partnership Manager at BizDev Partners (2021-Present)"]
+    },
+    {
+      "name": "Fatima Malik",
+      "email": "fatima.malik@example.com",
+      "role": "CANDIDATE",
+      "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy",
+      "isVerified": true,
+      "bio": "Community manager and social impact coordinator passionate about mission-driven organizations.",
+      "skills": ["Community Building", "Social Media", "Event Planning", "Grant Writing", "Public Relations"],
+      "educations": ["B.A. Nonprofit Management, DePaul University (2020)"],
+      "experiences": ["Community Coordinator at CivicOrg (2020-2022)", "Community Manager at OtherWorks (2022-Present)"]
+    }
+  ],
+  "companies": [
+    {
+      "name": "Nexus Technologies",
+      "description": "A leading provider of cloud-based enterprise software solutions, trusted by Fortune 500 companies worldwide.",
+      "slug": "nexus-technologies",
+      "logo_url": "https://placehold.co/200x200/4f46e5/white?text=NT"
+    },
+    {
+      "name": "Cloudify Inc",
+      "description": "Empowering businesses with scalable cloud infrastructure, DevOps tooling, and platform engineering.",
+      "slug": "cloudify-inc",
+      "logo_url": "https://placehold.co/200x200/0ea5e9/white?text=CI"
+    },
+    {
+      "name": "InnovateCo",
+      "description": "Building next-generation AI-powered products for the modern workplace. Design and product at our core.",
+      "slug": "innovateco",
+      "logo_url": "https://placehold.co/200x200/10b981/white?text=IC"
+    },
+    {
+      "name": "FinEdge Capital",
+      "description": "A boutique investment and financial services firm specializing in equity research and portfolio management.",
+      "slug": "finedge-capital",
+      "logo_url": "https://placehold.co/200x200/f59e0b/white?text=FC"
+    },
+    {
+      "name": "PeopleFirst HR",
+      "description": "Strategic HR consulting and outsourcing firm helping companies build people-first cultures.",
+      "slug": "peoplefirst-hr",
+      "logo_url": "https://placehold.co/200x200/ec4899/white?text=PH"
+    },
+    {
+      "name": "MarketMasters",
+      "description": "A full-service digital marketing agency driving growth through data-driven campaigns and brand storytelling.",
+      "slug": "marketmasters",
+      "logo_url": "https://placehold.co/200x200/f97316/white?text=MM"
+    },
+    {
+      "name": "SalesPro Inc",
+      "description": "Revenue-focused SaaS company with a world-class sales culture. We help B2B teams close more deals faster.",
+      "slug": "salespro-inc",
+      "logo_url": "https://placehold.co/200x200/84cc16/white?text=SP"
+    },
+    {
+      "name": "OpsFlow Solutions",
+      "description": "Operations excellence consulting firm specializing in Lean Six Sigma, process automation, and ERP implementations.",
+      "slug": "opsflow-solutions",
+      "logo_url": "https://placehold.co/200x200/06b6d4/white?text=OS"
+    },
+    {
+      "name": "SupportHub",
+      "description": "Customer experience platform and managed support services for high-growth technology companies.",
+      "slug": "supporthub",
+      "logo_url": "https://placehold.co/200x200/8b5cf6/white?text=SH"
+    },
+    {
+      "name": "BuildRight Engineering",
+      "description": "Civil and mechanical engineering firm delivering large-scale infrastructure and industrial projects globally.",
+      "slug": "buildright-engineering",
+      "logo_url": "https://placehold.co/200x200/78716c/white?text=BE"
+    },
+    {
+      "name": "LegalEagle Partners",
+      "description": "A modern law firm providing corporate legal services, M&A counsel, and regulatory compliance advisory.",
+      "slug": "legaleagle-partners",
+      "logo_url": "https://placehold.co/200x200/1e40af/white?text=LP"
+    },
+    {
+      "name": "AdminPro Services",
+      "description": "Executive administrative staffing and business support services for enterprises and C-suite executives.",
+      "slug": "adminpro-services",
+      "logo_url": "https://placehold.co/200x200/64748b/white?text=AS"
+    },
+    {
+      "name": "SupplyChain Global",
+      "description": "End-to-end global supply chain management and logistics consulting with operations in 40+ countries.",
+      "slug": "supplychain-global",
+      "logo_url": "https://placehold.co/200x200/15803d/white?text=SG"
+    },
+    {
+      "name": "EduPath Academy",
+      "description": "Corporate learning and development company delivering blended training solutions to enterprise clients.",
+      "slug": "edupath-academy",
+      "logo_url": "https://placehold.co/200x200/7c3aed/white?text=EA"
+    },
+    {
+      "name": "MediCore Health",
+      "description": "Healthcare technology company building clinical data platforms and health IT infrastructure for hospitals.",
+      "slug": "medicore-health",
+      "logo_url": "https://placehold.co/200x200/ef4444/white?text=MH"
+    },
+    {
+      "name": "R&D Innovations Lab",
+      "description": "Applied research lab at the frontier of AI, biotechnology, and advanced materials science.",
+      "slug": "rd-innovations-lab",
+      "logo_url": "https://placehold.co/200x200/0891b2/white?text=RL"
+    },
+    {
+      "name": "ConsultPro Group",
+      "description": "Top-tier management consulting firm advising global corporations on strategy, growth, and transformation.",
+      "slug": "consultpro-group",
+      "logo_url": "https://placehold.co/200x200/b45309/white?text=CG"
+    },
+    {
+      "name": "ProjectFlow",
+      "description": "Project delivery and PMO-as-a-Service firm specializing in Agile, waterfall, and hybrid methodologies.",
+      "slug": "projectflow",
+      "logo_url": "https://placehold.co/200x200/475569/white?text=PF"
+    },
+    {
+      "name": "BizDev Partners",
+      "description": "Business development accelerator helping startups and scale-ups build strategic partnerships and revenue channels.",
+      "slug": "bizdev-partners",
+      "logo_url": "https://placehold.co/200x200/16a34a/white?text=BP"
+    },
+    {
+      "name": "OtherWorks",
+      "description": "A social enterprise and community-driven organization connecting mission-driven talent with purpose-led companies.",
+      "slug": "otherworks",
+      "logo_url": "https://placehold.co/200x200/d97706/white?text=OW"
+    }
+  ],
+  "jobs": [
+    {
+      "title": "Senior Full-Stack Developer",
+      "description": "Design, build, and maintain scalable web applications using React and Node.js. You will own features end-to-end and collaborate closely with product and design.",
+      "status": "OPEN",
+      "category": "IT",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "New York, NY",
+      "companySlug": "nexus-technologies"
+    },
+    {
+      "title": "Cloud Solutions Architect",
+      "description": "Design resilient, cost-optimised multi-cloud architectures on AWS and GCP. Lead migrations from on-prem to cloud and establish infrastructure best practices.",
+      "status": "OPEN",
+      "category": "IT",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "cloudify-inc"
+    },
+    {
+      "title": "HR Business Partner",
+      "description": "Partner with senior leadership to build HR strategies that drive culture, performance, and engagement across the organisation.",
+      "status": "OPEN",
+      "category": "HR",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Boston, MA",
+      "companySlug": "peoplefirst-hr"
+    },
+    {
+      "title": "Talent Acquisition Specialist",
+      "description": "Own the end-to-end recruitment process for mid to senior-level roles. Partner with hiring managers to craft job profiles and deliver a world-class candidate experience.",
+      "status": "OPEN",
+      "category": "HR",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Austin, TX",
+      "companySlug": "peoplefirst-hr"
+    },
+    {
+      "title": "Financial Analyst",
+      "description": "Conduct equity research, build financial models, and produce investment reports on publicly traded companies across the technology and healthcare sectors.",
+      "status": "OPEN",
+      "category": "Finance",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "New York, NY",
+      "companySlug": "finedge-capital"
+    },
+    {
+      "title": "Senior Accountant",
+      "description": "Manage month-end close, prepare financial statements, and ensure compliance with GAAP. Partner with FP&A on budgeting and variance analysis.",
+      "status": "OPEN",
+      "category": "Finance",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Chicago, IL",
+      "companySlug": "finedge-capital"
+    },
+    {
+      "title": "Digital Marketing Manager",
+      "description": "Lead paid acquisition, SEO, and content strategy across all digital channels. Own the performance marketing budget and report on ROAS.",
+      "status": "OPEN",
+      "category": "Marketing",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Chicago, IL",
+      "companySlug": "marketmasters"
+    },
+    {
+      "title": "Content Marketing Strategist",
+      "description": "Develop a content strategy that builds brand authority and drives organic growth. Write long-form articles, case studies, and thought leadership pieces.",
+      "status": "OPEN",
+      "category": "Marketing",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "marketmasters"
+    },
+    {
+      "title": "Account Executive",
+      "description": "Close mid-market and enterprise SaaS deals. Own a $1.5M annual quota. Run discovery calls, product demos, and multi-stakeholder negotiations.",
+      "status": "OPEN",
+      "category": "Sales",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "San Francisco, CA",
+      "companySlug": "salespro-inc"
+    },
+    {
+      "title": "Sales Development Representative",
+      "description": "Generate pipeline through outbound prospecting via cold calls, emails, and LinkedIn. Qualify inbound leads and book discovery calls for AEs.",
+      "status": "OPEN",
+      "category": "Sales",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Denver, CO",
+      "companySlug": "salespro-inc"
+    },
+    {
+      "title": "Operations Manager",
+      "description": "Oversee daily operations, improve process efficiency using Lean methodologies, and manage cross-functional teams across procurement, logistics, and manufacturing.",
+      "status": "OPEN",
+      "category": "Operations",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Detroit, MI",
+      "companySlug": "opsflow-solutions"
+    },
+    {
+      "title": "Process Improvement Analyst",
+      "description": "Identify operational bottlenecks, conduct root-cause analysis, and implement Six Sigma improvement projects that reduce cost and increase throughput.",
+      "status": "OPEN",
+      "category": "Operations",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Pittsburgh, PA",
+      "companySlug": "opsflow-solutions"
+    },
+    {
+      "title": "Customer Success Manager",
+      "description": "Own a portfolio of enterprise accounts. Drive product adoption, reduce churn, and identify upsell opportunities. Act as the voice of the customer internally.",
+      "status": "OPEN",
+      "category": "Customer Support",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "supporthub"
+    },
+    {
+      "title": "Technical Support Engineer",
+      "description": "Provide Tier 2 technical support to enterprise clients. Diagnose platform issues, write runbooks, and collaborate with engineering on bug resolution.",
+      "status": "OPEN",
+      "category": "Customer Support",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Austin, TX",
+      "companySlug": "supporthub"
+    },
+    {
+      "title": "Mechanical Engineer",
+      "description": "Design and test mechanical components for industrial equipment. Use SolidWorks for 3D modeling and CAD drawings, and collaborate with manufacturing on DFM.",
+      "status": "OPEN",
+      "category": "Engineering",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Detroit, MI",
+      "companySlug": "buildright-engineering"
+    },
+    {
+      "title": "Civil Engineer",
+      "description": "Lead structural analysis and design for commercial and residential construction projects. Prepare technical drawings and ensure compliance with local building codes.",
+      "status": "OPEN",
+      "category": "Engineering",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Houston, TX",
+      "companySlug": "buildright-engineering"
+    },
+    {
+      "title": "Product Manager",
+      "description": "Define and drive the product roadmap. Work with engineering, design, and stakeholders to ship features that delight users and move key business metrics.",
+      "status": "OPEN",
+      "category": "Product Management",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Seattle, WA",
+      "companySlug": "innovateco"
+    },
+    {
+      "title": "Associate Product Manager",
+      "description": "Join our APM program to learn product management from experienced PMs. Own your first feature area within 3 months and ship meaningful improvements.",
+      "status": "OPEN",
+      "category": "Product Management",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "innovateco"
+    },
+    {
+      "title": "UI/UX Designer",
+      "description": "Craft beautiful, intuitive experiences for our flagship product. Conduct user research, run usability tests, and ship polished Figma designs to engineering.",
+      "status": "OPEN",
+      "category": "Design",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "innovateco"
+    },
+    {
+      "title": "Brand Designer",
+      "description": "Own the visual identity system for our clients. Design across web, print, and social. Develop brand guidelines and ensure consistent expression across all touchpoints.",
+      "status": "OPEN",
+      "category": "Design",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Los Angeles, CA",
+      "companySlug": "marketmasters"
+    },
+    {
+      "title": "Corporate Counsel",
+      "description": "Advise on M&A transactions, draft and negotiate commercial contracts, and ensure regulatory compliance across jurisdictions.",
+      "status": "OPEN",
+      "category": "Legal",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Washington, D.C.",
+      "companySlug": "legaleagle-partners"
+    },
+    {
+      "title": "Legal Compliance Analyst",
+      "description": "Monitor regulatory changes, maintain compliance frameworks, and conduct internal audits to ensure the organization meets all legal obligations.",
+      "status": "OPEN",
+      "category": "Legal",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "New York, NY",
+      "companySlug": "legaleagle-partners"
+    },
+    {
+      "title": "Executive Assistant",
+      "description": "Provide high-level administrative support to our C-suite. Manage complex calendars, travel itineraries, board communications, and confidential correspondence.",
+      "status": "OPEN",
+      "category": "Administration",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "New York, NY",
+      "companySlug": "adminpro-services"
+    },
+    {
+      "title": "Office Administrator",
+      "description": "Keep the office running smoothly. Manage vendor relationships, facilities, supplies, and coordinate events and meetings for the team.",
+      "status": "OPEN",
+      "category": "Administration",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Philadelphia, PA",
+      "companySlug": "adminpro-services"
+    },
+    {
+      "title": "Supply Chain Analyst",
+      "description": "Optimize demand planning, inventory levels, and supplier performance. Build dashboards in Power BI and lead S&OP meetings with cross-functional stakeholders.",
+      "status": "OPEN",
+      "category": "Supply Chain",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Columbus, OH",
+      "companySlug": "supplychain-global"
+    },
+    {
+      "title": "Logistics Coordinator",
+      "description": "Coordinate domestic and international freight movements, manage carrier relationships, and resolve shipment exceptions in real time.",
+      "status": "OPEN",
+      "category": "Supply Chain",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Memphis, TN",
+      "companySlug": "supplychain-global"
+    },
+    {
+      "title": "Curriculum Developer",
+      "description": "Design and develop engaging instructional content for enterprise L&D programs using ADDIE and SAM methodologies.",
+      "status": "OPEN",
+      "category": "Education & Training",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "edupath-academy"
+    },
+    {
+      "title": "Corporate Trainer",
+      "description": "Facilitate leadership, soft skills, and technical training workshops for enterprise clients. Measure training effectiveness through assessments and ROI reporting.",
+      "status": "OPEN",
+      "category": "Education & Training",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Chicago, IL",
+      "companySlug": "edupath-academy"
+    },
+    {
+      "title": "Clinical Data Analyst",
+      "description": "Analyse clinical datasets to uncover insights that improve patient outcomes. Build reports using SQL and Tableau for clinicians and hospital leadership.",
+      "status": "OPEN",
+      "category": "Healthcare",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Minneapolis, MN",
+      "companySlug": "medicore-health"
+    },
+    {
+      "title": "Healthcare IT Specialist",
+      "description": "Implement and maintain Epic EMR systems at hospital client sites. Provide end-user training and resolve technical issues with clinical workflows.",
+      "status": "OPEN",
+      "category": "Healthcare",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "Nashville, TN",
+      "companySlug": "medicore-health"
+    },
+    {
+      "title": "R&D Engineer",
+      "description": "Develop and prototype next-generation hardware solutions at the intersection of robotics and AI. Work closely with research scientists to transition concepts to products.",
+      "status": "OPEN",
+      "category": "Research & Development",
+      "job_type": "FULL_TIME",
+      "job_location": "ONSITE",
+      "location": "San Jose, CA",
+      "companySlug": "rd-innovations-lab"
+    },
+    {
+      "title": "Research Scientist (NLP)",
+      "description": "Conduct original research in natural language processing. Publish findings, build proof-of-concept models, and collaborate with product engineering on productisation.",
+      "status": "OPEN",
+      "category": "Research & Development",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "San Francisco, CA",
+      "companySlug": "rd-innovations-lab"
+    },
+    {
+      "title": "Management Consultant",
+      "description": "Lead client engagements advising Fortune 500 companies on growth strategy, cost reduction, and digital transformation. Own deliverables and client relationships.",
+      "status": "OPEN",
+      "category": "Consulting",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "New York, NY",
+      "companySlug": "consultpro-group"
+    },
+    {
+      "title": "Strategy Analyst",
+      "description": "Support senior consultants in building market analyses, competitive landscapes, and executive-ready presentations for global clients.",
+      "status": "OPEN",
+      "category": "Consulting",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Chicago, IL",
+      "companySlug": "consultpro-group"
+    },
+    {
+      "title": "Senior Project Manager",
+      "description": "Lead complex, cross-functional technology projects from initiation to closure. Own the project plan, risk register, and executive stakeholder communications.",
+      "status": "OPEN",
+      "category": "Project Management",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Atlanta, GA",
+      "companySlug": "projectflow"
+    },
+    {
+      "title": "Agile Scrum Master",
+      "description": "Coach engineering teams on Agile principles. Facilitate sprint ceremonies, remove blockers, and drive continuous improvement through retrospective action items.",
+      "status": "OPEN",
+      "category": "Project Management",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "projectflow"
+    },
+    {
+      "title": "Business Development Manager",
+      "description": "Identify and close strategic partnership and channel deals. Own the partnership pipeline, negotiate commercial terms, and deliver on revenue targets.",
+      "status": "OPEN",
+      "category": "Business Development",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Miami, FL",
+      "companySlug": "bizdev-partners"
+    },
+    {
+      "title": "Partnership Manager",
+      "description": "Nurture and expand existing partner relationships. Run quarterly business reviews, enable partner teams, and identify co-marketing opportunities.",
+      "status": "OPEN",
+      "category": "Business Development",
+      "job_type": "FULL_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "bizdev-partners"
+    },
+    {
+      "title": "Community Manager",
+      "description": "Build and nurture an online and offline community of engaged members. Plan events, moderate discussions, and create content that drives belonging and purpose.",
+      "status": "OPEN",
+      "category": "Other",
+      "job_type": "FULL_TIME",
+      "job_location": "HYBRID",
+      "location": "Portland, OR",
+      "companySlug": "otherworks"
+    },
+    {
+      "title": "Social Impact Coordinator",
+      "description": "Coordinate corporate social responsibility programs, volunteer initiatives, and grant-making activities that advance our social mission.",
+      "status": "OPEN",
+      "category": "Other",
+      "job_type": "PART_TIME",
+      "job_location": "REMOTE",
+      "location": "Remote",
+      "companySlug": "otherworks"
+    }
+  ],
+  "applications": [
+    { "candidateEmail": "david.lee@example.com",       "jobTitle": "Senior Full-Stack Developer",    "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/david-lee.pdf" },
+    { "candidateEmail": "david.lee@example.com",       "jobTitle": "Cloud Solutions Architect",      "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/david-lee.pdf" },
+    { "candidateEmail": "grace.kim@example.com",       "jobTitle": "Cloud Solutions Architect",      "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/grace-kim.pdf" },
+    { "candidateEmail": "henry.brown@example.com",     "jobTitle": "Cloud Solutions Architect",      "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/henry-brown.pdf" },
+    { "candidateEmail": "emma.davis@example.com",      "jobTitle": "UI/UX Designer",                 "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/emma-davis.pdf" },
+    { "candidateEmail": "emma.davis@example.com",      "jobTitle": "Brand Designer",                 "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/emma-davis.pdf" },
+    { "candidateEmail": "frank.wilson@example.com",    "jobTitle": "Research Scientist (NLP)",       "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/frank-wilson.pdf" },
+    { "candidateEmail": "carlos.rivera@example.com",   "jobTitle": "Research Scientist (NLP)",       "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/carlos-rivera.pdf" },
+    { "candidateEmail": "carlos.rivera@example.com",   "jobTitle": "R&D Engineer",                   "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/carlos-rivera.pdf" },
+    { "candidateEmail": "kyle.robinson@example.com",   "jobTitle": "Financial Analyst",              "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/kyle-robinson.pdf" },
+    { "candidateEmail": "kyle.robinson@example.com",   "jobTitle": "Senior Accountant",              "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/kyle-robinson.pdf" },
+    { "candidateEmail": "isabella.thomas@example.com", "jobTitle": "Digital Marketing Manager",      "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/isabella-thomas.pdf" },
+    { "candidateEmail": "isabella.thomas@example.com", "jobTitle": "Content Marketing Strategist",   "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/isabella-thomas.pdf" },
+    { "candidateEmail": "linda.clark@example.com",     "jobTitle": "Account Executive",              "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/linda-clark.pdf" },
+    { "candidateEmail": "linda.clark@example.com",     "jobTitle": "Sales Development Representative","current_stage": "REJECTED",  "resume_url": "https://example.com/resumes/linda-clark.pdf" },
+    { "candidateEmail": "michael.evans@example.com",   "jobTitle": "Operations Manager",             "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/michael-evans.pdf" },
+    { "candidateEmail": "michael.evans@example.com",   "jobTitle": "Process Improvement Analyst",    "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/michael-evans.pdf" },
+    { "candidateEmail": "nina.walker@example.com",     "jobTitle": "Customer Success Manager",       "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/nina-walker.pdf" },
+    { "candidateEmail": "nina.walker@example.com",     "jobTitle": "Technical Support Engineer",     "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/nina-walker.pdf" },
+    { "candidateEmail": "oliver.hall@example.com",     "jobTitle": "Mechanical Engineer",            "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/oliver-hall.pdf" },
+    { "candidateEmail": "oliver.hall@example.com",     "jobTitle": "Civil Engineer",                 "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/oliver-hall.pdf" },
+    { "candidateEmail": "penelope.young@example.com",  "jobTitle": "Corporate Counsel",              "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/penelope-young.pdf" },
+    { "candidateEmail": "penelope.young@example.com",  "jobTitle": "Legal Compliance Analyst",       "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/penelope-young.pdf" },
+    { "candidateEmail": "ryan.mitchell@example.com",   "jobTitle": "Senior Project Manager",         "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/ryan-mitchell.pdf" },
+    { "candidateEmail": "ryan.mitchell@example.com",   "jobTitle": "Agile Scrum Master",             "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/ryan-mitchell.pdf" },
+    { "candidateEmail": "sophia.carter@example.com",   "jobTitle": "Clinical Data Analyst",          "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/sophia-carter.pdf" },
+    { "candidateEmail": "sophia.carter@example.com",   "jobTitle": "Healthcare IT Specialist",       "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/sophia-carter.pdf" },
+    { "candidateEmail": "aaron.price@example.com",     "jobTitle": "Supply Chain Analyst",           "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/aaron-price.pdf" },
+    { "candidateEmail": "aaron.price@example.com",     "jobTitle": "Logistics Coordinator",          "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/aaron-price.pdf" },
+    { "candidateEmail": "brianna.hughes@example.com",  "jobTitle": "Curriculum Developer",           "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/brianna-hughes.pdf" },
+    { "candidateEmail": "brianna.hughes@example.com",  "jobTitle": "Corporate Trainer",              "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/brianna-hughes.pdf" },
+    { "candidateEmail": "diana.nguyen@example.com",    "jobTitle": "Management Consultant",          "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/diana-nguyen.pdf" },
+    { "candidateEmail": "diana.nguyen@example.com",    "jobTitle": "Strategy Analyst",               "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/diana-nguyen.pdf" },
+    { "candidateEmail": "ethan.morris@example.com",    "jobTitle": "Business Development Manager",   "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/ethan-morris.pdf" },
+    { "candidateEmail": "ethan.morris@example.com",    "jobTitle": "Partnership Manager",            "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/ethan-morris.pdf" },
+    { "candidateEmail": "fatima.malik@example.com",    "jobTitle": "Community Manager",              "current_stage": "INTERVIEW",  "resume_url": "https://example.com/resumes/fatima-malik.pdf" },
+    { "candidateEmail": "fatima.malik@example.com",    "jobTitle": "Social Impact Coordinator",      "current_stage": "OFFERED",    "resume_url": "https://example.com/resumes/fatima-malik.pdf" },
+    { "candidateEmail": "james.anderson@example.com",  "jobTitle": "Senior Full-Stack Developer",    "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/james-anderson.pdf" },
+    { "candidateEmail": "frank.wilson@example.com",    "jobTitle": "Clinical Data Analyst",          "current_stage": "SCREENING",  "resume_url": "https://example.com/resumes/frank-wilson.pdf" },
+    { "candidateEmail": "henry.brown@example.com",     "jobTitle": "R&D Engineer",                   "current_stage": "APPLIED",    "resume_url": "https://example.com/resumes/henry-brown.pdf" }
+  ],
+  "interviews": [
+    { "applicationRef": { "candidateEmail": "david.lee@example.com",       "jobTitle": "Senior Full-Stack Developer"    }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 3  },
+    { "applicationRef": { "candidateEmail": "henry.brown@example.com",     "jobTitle": "Cloud Solutions Architect"      }, "interview_type": "PHONE",  "scheduled_at_offset_days": 2  },
+    { "applicationRef": { "candidateEmail": "emma.davis@example.com",      "jobTitle": "UI/UX Designer"                 }, "interview_type": "ONSITE", "scheduled_at_offset_days": 5  },
+    { "applicationRef": { "candidateEmail": "frank.wilson@example.com",    "jobTitle": "Research Scientist (NLP)"       }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 4  },
+    { "applicationRef": { "candidateEmail": "kyle.robinson@example.com",   "jobTitle": "Financial Analyst"              }, "interview_type": "ONSITE", "scheduled_at_offset_days": 6  },
+    { "applicationRef": { "candidateEmail": "isabella.thomas@example.com", "jobTitle": "Digital Marketing Manager"      }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 3  },
+    { "applicationRef": { "candidateEmail": "linda.clark@example.com",     "jobTitle": "Account Executive"              }, "interview_type": "PHONE",  "scheduled_at_offset_days": 7  },
+    { "applicationRef": { "candidateEmail": "nina.walker@example.com",     "jobTitle": "Customer Success Manager"       }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 2  },
+    { "applicationRef": { "candidateEmail": "oliver.hall@example.com",     "jobTitle": "Mechanical Engineer"            }, "interview_type": "ONSITE", "scheduled_at_offset_days": 8  },
+    { "applicationRef": { "candidateEmail": "penelope.young@example.com",  "jobTitle": "Corporate Counsel"              }, "interview_type": "ONSITE", "scheduled_at_offset_days": 5  },
+    { "applicationRef": { "candidateEmail": "ryan.mitchell@example.com",   "jobTitle": "Agile Scrum Master"             }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 4  },
+    { "applicationRef": { "candidateEmail": "sophia.carter@example.com",   "jobTitle": "Clinical Data Analyst"          }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 3  },
+    { "applicationRef": { "candidateEmail": "aaron.price@example.com",     "jobTitle": "Supply Chain Analyst"           }, "interview_type": "PHONE",  "scheduled_at_offset_days": 6  },
+    { "applicationRef": { "candidateEmail": "diana.nguyen@example.com",    "jobTitle": "Management Consultant"          }, "interview_type": "ONSITE", "scheduled_at_offset_days": 9  },
+    { "applicationRef": { "candidateEmail": "fatima.malik@example.com",    "jobTitle": "Community Manager"              }, "interview_type": "VIDEO",  "scheduled_at_offset_days": 2  }
+  ]
+}

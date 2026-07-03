@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireTrack - Folder Structure</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      h2 {
+        color: #667eea;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 10px;
+        margin: 30px 0 20px 0;
+        font-size: 1.8em;
+      }
+
+      h3 {
+        color: #764ba2;
+        margin: 25px 0 15px 0;
+        font-size: 1.3em;
+      }
+
+      pre {
+        background: #f5f5f5;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        overflow-x: auto;
+        margin: 20px 0;
+        border-radius: 6px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.9em;
+        line-height: 1.5;
+        color: #2c3e50;
+      }
+
+      code {
+        background: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+      }
+
+      ul {
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+
+      .folder-tree {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 20px;
+        overflow-x: auto;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.95em;
+        line-height: 1.6;
+        color: #2c3e50;
+      }
+
+      .folder-tree code {
+        background: none;
+        padding: 0;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .info-box {
+        background: #f0f7ff;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+      }
+
+      .info-box p {
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+
+      footer {
+        background: #f5f5f5;
+        padding: 30px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+        color: #666;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      .breadcrumb {
+        color: #999;
+        margin-bottom: 20px;
+        font-size: 0.95em;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          border-radius: 0;
+        }
+
+        header {
+          padding: 30px 20px;
+        }
+
+        header h1 {
+          font-size: 1.8em;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        pre {
+          font-size: 0.85em;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🏗️ HireTrack Folder Structure</h1>
+        <p>Complete project directory layout and file organization</p>
+      </header>
+
+      <div class="content">
+        <div class="breadcrumb">Home / Project Structure</div>
+
+        <div class="section">
+          <h2>Project Directory Tree</h2>
+          <p>
+            This is the complete folder structure of the HireTrack application,
+            showing the organization of frontend and backend code:
+          </p>
+
+          <div class="folder-tree">
+            <code
+              >hiretrack/ ├── app/ │ ├── (auth)/ │ │ ├── login/page.tsx │ │ └──
+              register/page.tsx │ ├── (dashboard)/ │ │ ├── layout.tsx ← auth
+              guard here │ │ ├── pipeline/page.tsx ← kanban board │ │ ├── jobs/
+              │ │ │ ├── page.tsx │ │ │ └── [id]/page.tsx │ │ ├── applications/ │
+              │ │ └── [id]/page.tsx │ │ └── analytics/page.tsx │ ├── api/ │ │
+              ├── auth/[...nextauth]/route.ts │ │ ├── jobs/ │ │ │ ├── route.ts ←
+              GET list, POST create │ │ │ └── [id]/route.ts ← GET, PATCH, DELETE
+              │ │ ├── applications/ │ │ │ ├── route.ts │ │ │ └── [id]/ │ │ │ ├──
+              route.ts │ │ │ └── stage/route.ts ← PATCH stage │ │ └──
+              upload/route.ts │ └── layout.tsx │ ├── lib/ │ ├── db/ │ │ ├──
+              index.ts ← drizzle client │ │ ├── schema.ts ← all table
+              definitions │ │ ├── queries/ │ │ │ ├── jobs.ts │ │ │ ├──
+              applications.ts │ │ │ └── users.ts │ │ └── migrations/ ←
+              drizzle-kit output │ ├── redis/ │ │ └── index.ts ← ioredis
+              singleton │ ├── queue/ │ │ ├── index.ts ← BullMQ queue setup │ │
+              ├── worker.ts ← worker process entry │ │ └── jobs/ │ │ ├──
+              parseResume.ts │ │ └── sendEmail.ts │ ├── cron/ │ │ ├── index.ts ←
+              register all crons │ │ ├── interviewReminders.ts │ │ └──
+              weeklyDigest.ts │ ├── email/ │ │ ├── index.ts ← Resend/Nodemailer
+              client │ │ └── templates/ │ │ ├── interviewReminder.tsx │ │ └──
+              weeklyDigest.tsx │ ├── validations/ │ │ ├── job.schema.ts │ │ ├──
+              application.schema.ts │ │ └── auth.schema.ts │ └── utils/ │ ├──
+              rateLimit.ts ← Redis sliding window │ └── cache.ts ← cache helpers
+              │ ├── components/ │ ├── kanban/ │ ├── forms/ │ └── ui/ │ ├──
+              middleware.ts ← route protection ├── worker.ts ← separate process:
+              node worker.ts └── drizzle.config.ts</code
+            >
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📁 Directory Breakdown</h2>
+
+          <div class="info-box">
+            <strong>Frontend Structure (Next.js App Router)</strong>
+            <p>
+              Organized by route groups and concerns. Authentication and
+              dashboard are separate route groups for cleaner middleware
+              handling.
+            </p>
+          </div>
+
+          <h3>app/ - Application Pages and API Routes</h3>
+          <ul>
+            <li>
+              <strong>(auth)/</strong> - Public authentication pages (login,
+              register)
+            </li>
+            <li>
+              <strong>(dashboard)/</strong> - Protected recruiter/admin
+              interface
+            </li>
+            <li>
+              <strong>api/</strong> - REST API endpoints for all operations
+            </li>
+          </ul>
+
+          <h3>lib/ - Shared Utilities and Business Logic</h3>
+          <ul>
+            <li>
+              <strong>db/</strong> - Database client, schema definitions, and
+              query helpers
+            </li>
+            <li>
+              <strong>redis/</strong> - Redis singleton for caching and rate
+              limiting
+            </li>
+            <li>
+              <strong>queue/</strong> - BullMQ job queue setup and worker
+              process
+            </li>
+            <li>
+              <strong>cron/</strong> - Scheduled jobs (reminders, digests)
+            </li>
+            <li>
+              <strong>email/</strong> - Email templates and transactional email
+              client
+            </li>
+            <li>
+              <strong>validations/</strong> - Zod schemas for request validation
+            </li>
+            <li>
+              <strong>utils/</strong> - Helper functions (rate limiting,
+              caching)
+            </li>
+          </ul>
+
+          <h3>components/ - Reusable React Components</h3>
+          <ul>
+            <li><strong>kanban/</strong> - Kanban board components</li>
+            <li><strong>forms/</strong> - Form components and handlers</li>
+            <li>
+              <strong>ui/</strong> - Base UI components (buttons, cards, modals)
+            </li>
+          </ul>
+
+          <h3>Root Files</h3>
+          <ul>
+            <li>
+              <strong>middleware.ts</strong> - Route protection and auth guards
+            </li>
+            <li>
+              <strong>worker.ts</strong> - Entry point for background worker
+              process
+            </li>
+            <li>
+              <strong>drizzle.config.ts</strong> - Database migration
+              configuration
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>🏛️ Architecture Patterns</h2>
+
+          <h3>API Conventions</h3>
+          <ul>
+            <li>RESTful endpoints with standard HTTP methods</li>
+            <li>Validation on all POST/PATCH endpoints using Zod</li>
+            <li>
+              Atomic transactions for multi-step operations (e.g., stage
+              changes)
+            </li>
+          </ul>
+
+          <h3>Background Jobs</h3>
+          <ul>
+            <li>
+              Long-running tasks (resume parsing, emails) handled asynchronously
+            </li>
+            <li>BullMQ manages retry logic and dead-letter queues</li>
+            <li>Independent worker process for horizontal scaling</li>
+          </ul>
+
+          <h3>Database Layer</h3>
+          <ul>
+            <li>Drizzle ORM for type-safe queries</li>
+            <li>Migrations tracked in <code>drizzle/</code> folder</li>
+            <li>All tables use UUID primary keys for scalability</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>🚀 Running the Application</h2>
+
+          <h3>Frontend (Next.js on port 3000)</h3>
+          <pre><code>cd frontend
+npm run dev</code></pre>
+
+          <h3>Backend (Node.js API on port 5000)</h3>
+          <pre><code>cd backend
+npm run dev</code></pre>
+
+          <h3>Background Worker (Separate Process)</h3>
+          <pre><code>cd frontend
+npm run worker</code></pre>
+
+          <h3>Database Migrations</h3>
+          <pre><code>cd frontend
+npm run db:push</code></pre>
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>HireTrack Project Structure Documentation</strong></p>
+        <p>Last Updated: April 2026 | Version 1.0</p>
+        <p>
+          For detailed feature documentation, see
+          <code>HireTrack_PRD.html</code>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

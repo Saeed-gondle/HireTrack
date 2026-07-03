@@ -1,0 +1,1501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireTrack - Product Requirements Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.8em;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+        margin: 5px 0;
+      }
+
+      .meta-table {
+        background: rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        border-radius: 6px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        width: fit-content;
+        margin: 20px auto;
+      }
+
+      .meta-row {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .meta-row:nth-child(even) {
+        border-right: none;
+      }
+
+      .meta-row:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+
+      .meta-label {
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .meta-value {
+        opacity: 0.85;
+        font-size: 0.95em;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .toc-container {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 40px;
+      }
+
+      .toc-container h3 {
+        margin-bottom: 15px;
+        color: #667eea;
+      }
+
+      .toc-container ol {
+        margin-left: 20px;
+      }
+
+      .toc-container li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+      }
+
+      .toc-container a {
+        color: #667eea;
+        text-decoration: none;
+      }
+
+      .toc-container a:hover {
+        text-decoration: underline;
+      }
+
+      h2 {
+        color: #667eea;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 12px;
+        margin: 40px 0 20px 0;
+        font-size: 2em;
+      }
+
+      h3 {
+        color: #764ba2;
+        margin: 25px 0 15px 0;
+        font-size: 1.4em;
+      }
+
+      h4 {
+        color: #555;
+        margin: 15px 0 10px 0;
+        font-size: 1.1em;
+      }
+
+      p {
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        margin-left: 25px;
+        margin-bottom: 15px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      th {
+        background: #667eea;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      tr:hover {
+        background: #f8f9fa;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      code {
+        background: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.9em;
+      }
+
+      pre {
+        background: #2c3e50;
+        color: #ecf0f1;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        overflow-x: auto;
+        margin: 20px 0;
+        border-radius: 6px;
+        font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+        font-size: 0.85em;
+        line-height: 1.5;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+        color: #ecf0f1;
+      }
+
+      .priority-must {
+        background: #fff3cd;
+        color: #856404;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+
+      .priority-should {
+        background: #d1ecf1;
+        color: #0c5460;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+
+      .priority-nice {
+        background: #e2e3e5;
+        color: #383d41;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .subsection {
+        margin-left: 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-left: 4px solid #667eea;
+        margin: 20px 0;
+        border-radius: 6px;
+      }
+
+      .info-box {
+        background: #d4edff;
+        border-left: 4px solid #667eea;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 6px;
+      }
+
+      .feature-category {
+        background: #f0f7ff;
+        border: 1px solid #c7e0ff;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 25px 0;
+      }
+
+      .feature-category h3 {
+        margin-top: 0;
+      }
+
+      .page-section {
+        background: #fff5f5;
+        border: 1px solid #ffcccb;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 15px 0;
+      }
+
+      .page-section h4 {
+        color: #764ba2;
+        margin-top: 0;
+      }
+
+      footer {
+        background: #f5f5f5;
+        padding: 30px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+        color: #666;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      .breadcrumb {
+        color: #999;
+        margin-bottom: 20px;
+        font-size: 0.95em;
+      }
+
+      .implementation-note {
+        background: #fffbea;
+        border-left: 4px solid #f59e0b;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+      }
+
+      .implementation-note strong {
+        color: #b45309;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          border-radius: 0;
+        }
+
+        header {
+          padding: 30px 20px;
+        }
+
+        header h1 {
+          font-size: 1.8em;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .meta-table {
+          grid-template-columns: 1fr;
+        }
+
+        .meta-row {
+          border-right: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+          font-size: 0.9em;
+        }
+
+        th,
+        td {
+          padding: 8px;
+        }
+
+        pre {
+          font-size: 0.8em;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📋 HireTrack PRD</h1>
+        <p>Applicant Tracking & Recruitment Automation Platform</p>
+        <p style="font-size: 0.95em; margin-top: 15px">
+          Product Requirements Document (PRD) - v1.0
+        </p>
+
+        <div class="meta-table">
+          <div class="meta-row">
+            <div class="meta-label">Product</div>
+            <div class="meta-value">
+              HireTrack - Full-Stack ATS Web Application
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Stack</div>
+            <div class="meta-value">
+              Next.js 14, TypeScript, PostgreSQL, Drizzle ORM, Redis, BullMQ,
+              Zod, Tailwind CSS
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Audience</div>
+            <div class="meta-value">
+              Small to mid-size companies hiring in-house
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-label">Author</div>
+            <div class="meta-value">Engineering Team - April 2026</div>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="breadcrumb">Home / PRD Documentation</div>
+
+        <!-- Table of Contents -->
+        <div class="toc-container">
+          <h3>📑 Quick Navigation</h3>
+          <ol>
+            <li><a href="#overview">Product Overview</a></li>
+            <li><a href="#concepts">Domain Concepts</a></li>
+            <li><a href="#features">Complete Feature List by Category</a></li>
+            <li><a href="#pages">Feature Distribution by Pages</a></li>
+            <li><a href="#datamodel">Data Model</a></li>
+            <li><a href="#nfr">Non-Functional Requirements</a></li>
+            <li><a href="#stack">Technology Stack</a></li>
+            <li><a href="#delivery">Delivery Plan</a></li>
+          </ol>
+        </div>
+
+        <!-- 1. Product Overview -->
+        <div class="section" id="overview">
+          <h2>1. Product Overview</h2>
+
+          <p>
+            HireTrack is a web-based Applicant Tracking System (ATS). Companies
+            use it to post jobs, receive applications, and manage candidates
+            from first application to final offer inside one platform.
+          </p>
+
+          <p>
+            HireTrack combines the usability of a public job board, a visual
+            workflow board, and automated candidate communication to replace
+            fragmented email-and-spreadsheet hiring workflows.
+          </p>
+
+          <h3>1.1 Problem Statement</h3>
+          <p>
+            Most small companies manage recruiting with inboxes and
+            spreadsheets. This causes:
+          </p>
+          <ul>
+            <li>Applications getting lost</li>
+            <li>Delayed or missed follow-ups</li>
+            <li>No shared, reliable view of candidate status</li>
+            <li>High coordination overhead for interview scheduling</li>
+            <li>No consistent analytics for hiring performance</li>
+          </ul>
+
+          <h3>1.2 Target Users</h3>
+          <table>
+            <tr>
+              <th>Role</th>
+              <th>User Type</th>
+              <th>Core Capabilities</th>
+            </tr>
+            <tr>
+              <td><strong>Admin</strong></td>
+              <td>Platform owner</td>
+              <td>View and manage all platform data, users, analytics</td>
+            </tr>
+            <tr>
+              <td><strong>Recruiter</strong></td>
+              <td>HR / hiring manager</td>
+              <td>Create jobs, run hiring pipelines, schedule interviews</td>
+            </tr>
+            <tr>
+              <td><strong>Candidate</strong></td>
+              <td>Job seeker</td>
+              <td>Browse jobs, apply, and track application status</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 2. Domain Concepts -->
+        <div class="section" id="concepts">
+          <h2>2. Domain Concepts</h2>
+
+          <div class="feature-category">
+            <h3>2.1 Company</h3>
+            <p>
+              A hiring organization profile. Recruiters create jobs under their
+              company. One recruiter manages one company. Admins can manage all
+              companies.
+            </p>
+          </div>
+
+          <div class="feature-category">
+            <h3>2.2 Job Listing</h3>
+            <p>
+              An open position with title, description, requirements, location,
+              and status (<code>DRAFT</code>, <code>OPEN</code>,
+              <code>CLOSED</code>). Only <code>OPEN</code> jobs are public.
+            </p>
+          </div>
+
+          <div class="feature-category">
+            <h3>2.3 Application</h3>
+            <p>
+              A candidate submission linked to a specific job. Each application
+              progresses through a defined hiring pipeline.
+            </p>
+          </div>
+
+          <div class="feature-category">
+            <h3>2.4 Pipeline Stages</h3>
+            <table>
+              <tr>
+                <th>Stage</th>
+                <th>Meaning</th>
+              </tr>
+              <tr>
+                <td><strong>Applied</strong></td>
+                <td>Application submitted but not reviewed</td>
+              </tr>
+              <tr>
+                <td><strong>Screening</strong></td>
+                <td>Resume reviewed, under consideration</td>
+              </tr>
+              <tr>
+                <td><strong>Interview</strong></td>
+                <td>One or more interviews scheduled</td>
+              </tr>
+              <tr>
+                <td><strong>Offer</strong></td>
+                <td>Offer extended</td>
+              </tr>
+              <tr>
+                <td><strong>Hired</strong></td>
+                <td>Offer accepted</td>
+              </tr>
+              <tr>
+                <td><strong>Rejected</strong></td>
+                <td>Candidate not selected</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="feature-category">
+            <h3>2.5 Audit Log</h3>
+            <p>
+              Immutable event history for stage changes (who changed what, from
+              where, to where, and when). Serves compliance and analytics use
+              cases.
+            </p>
+          </div>
+
+          <div class="feature-category">
+            <h3>2.6 Background Jobs and Cron</h3>
+            <p>
+              Long-running or scheduled tasks (resume parsing, email sending,
+              reminders, weekly digests) run asynchronously via BullMQ + Redis
+              and cron schedules.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Complete Feature List -->
+        <div class="section" id="features">
+          <h2>3. Complete Feature List by Category</h2>
+
+          <!-- Authentication -->
+          <div class="feature-category">
+            <h3>🔐 Authentication & Authorization</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>OAuth Login</td>
+                <td>Google/GitHub sign-in via NextAuth v5</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Role Assignment</td>
+                <td>Assign ADMIN, RECRUITER, or CANDIDATE on first login</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Protected Routes</td>
+                <td>Enforce auth/session checks at middleware level</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>JWT Refresh</td>
+                <td>Rotate tokens on refresh</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Role-Based UI</td>
+                <td>Role-specific navigation and pages</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Magic Link Login</td>
+                <td>Optional email-based login for candidates</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Admin Impersonation</td>
+                <td>Temporary impersonation with audit logging</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Job Management -->
+          <div class="feature-category">
+            <h3>💼 Job Management (Recruiter)</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Create Job</td>
+                <td>Create as DRAFT with validated fields</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Publish Job</td>
+                <td>Transition DRAFT → OPEN</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Edit Job</td>
+                <td>Update listing details anytime</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Close Job</td>
+                <td>Transition to CLOSED and disable applications</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Job Dashboard</td>
+                <td>View jobs with applicant counts and stage breakdown</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Soft Delete</td>
+                <td>Set deleted_at instead of hard delete</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Duplicate Job</td>
+                <td>Clone job into a new DRAFT</td>
+                <td><span class="priority-nice">Nice to Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Public Job Board -->
+          <div class="feature-category">
+            <h3>🌐 Public Job Board (Candidate)</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Browse Jobs</td>
+                <td>Paginated list of OPEN jobs</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Filter by Type</td>
+                <td>Filter by type, location, and keyword</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Job Detail</td>
+                <td>Full job and company details</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Full-Text Search</td>
+                <td>PostgreSQL pg_trgm search support</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Saved Jobs</td>
+                <td>Bookmark for later</td>
+                <td><span class="priority-nice">Nice to Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Application Submission -->
+          <div class="feature-category">
+            <h3>📝 Application Submission (Candidate)</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Apply to Job</td>
+                <td>One application per candidate per job</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Resume Upload</td>
+                <td>Upload PDF resume and store URL</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Application Status</td>
+                <td>Candidate-facing live status tracking</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Withdraw Application</td>
+                <td>Withdraw before screening threshold</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Rate Limiting</td>
+                <td>Max 10 applications per hour per candidate</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Kanban Pipeline -->
+          <div class="feature-category">
+            <h3>📊 Kanban Pipeline (Recruiter)</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Kanban Board</td>
+                <td>Stage columns with candidate cards</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Drag and Drop</td>
+                <td>Move cards between stages</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Stage Change API</td>
+                <td>Atomic stage update + audit log write</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Audit Trail View</td>
+                <td>Full event timeline per application</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Bulk Reject</td>
+                <td>Multi-select rejection</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Internal Notes</td>
+                <td>Private recruiter notes</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Filter by Job</td>
+                <td>Scope board to selected job</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Interview Scheduling -->
+          <div class="feature-category">
+            <h3>📅 Interview Scheduling</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Create Interview</td>
+                <td>Set type, date/time, and meeting details</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Candidate Notification</td>
+                <td>Queue notification email on creation</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Calendar Download</td>
+                <td>Provide .ics attachments</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Reminder Cron</td>
+                <td>Queue reminders for next-day interviews</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Reschedule</td>
+                <td>Support interview time changes</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Email Notifications -->
+          <div class="feature-category">
+            <h3>📧 Email Notification System</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Application Received</td>
+                <td>Confirmation email on apply</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Stage Change Email</td>
+                <td>Notify on Interview/Offer transitions</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Interview Scheduled</td>
+                <td>Notify both recruiter and candidate</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Interview Reminder</td>
+                <td>Automated reminder 24 hours before</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Weekly Digest</td>
+                <td>Recruiter summary email every Monday</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Rejection Email</td>
+                <td>Polite rejection workflow</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Email Logs</td>
+                <td>Persist queue/delivery status</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Redis Features -->
+          <div class="feature-category">
+            <h3>⚡ Redis: Caching and Rate Limiting</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Job Listing Cache</td>
+                <td>Cache public jobs for 5 minutes</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Cache Invalidation</td>
+                <td>Invalidate when jobs change</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Candidate Apply Limit</td>
+                <td>10 applications/hour per candidate</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Session Cache</td>
+                <td>Cache auth/session lookups</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>API Rate Limit</td>
+                <td>100 requests/IP/15 min global cap</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Search Features -->
+          <div class="feature-category">
+            <h3>🔍 Search</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Job Search</td>
+                <td>Trigram keyword search on jobs</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Candidate Search</td>
+                <td>Search by name, email, extracted skills</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>GIN Indexes</td>
+                <td>Optimize trigram queries at scale</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Suggestions</td>
+                <td>Debounced search suggestions</td>
+                <td><span class="priority-nice">Nice to Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Analytics -->
+          <div class="feature-category">
+            <h3>📈 Analytics Dashboard</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>Conversion Funnel</td>
+                <td>Applied → Hired per job</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Time-to-Hire</td>
+                <td>Avg days from apply to hire</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Avg Time Per Stage</td>
+                <td>Stage duration bottleneck detection</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Applicants Over Time</td>
+                <td>Weekly/monthly trend charting</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Source Tracking</td>
+                <td>UTM/source attribution</td>
+                <td><span class="priority-nice">Nice to Have</span></td>
+              </tr>
+              <tr>
+                <td>Global Admin View</td>
+                <td>Cross-company platform metrics</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Admin Panel -->
+          <div class="feature-category">
+            <h3>🛠️ Admin Panel</h3>
+            <table>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+                <th>Priority</th>
+              </tr>
+              <tr>
+                <td>User Management</td>
+                <td>Role changes and account controls</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Company Overview</td>
+                <td>Platform-wide company visibility</td>
+                <td><span class="priority-must">Must Have</span></td>
+              </tr>
+              <tr>
+                <td>Impersonation</td>
+                <td>Debug/support impersonation with logs</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Platform Stats</td>
+                <td>Jobs, applications, queue, email metrics</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+              <tr>
+                <td>Queue Monitor</td>
+                <td>Failed/pending/retry queue observability</td>
+                <td><span class="priority-should">Should Have</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Feature Distribution by Pages -->
+        <div class="section" id="pages">
+          <h2>4. Feature Distribution by Pages</h2>
+
+          <h3>👤 Candidate Pages</h3>
+          <div class="page-section">
+            <h4>Public Job Board (/jobs)</h4>
+            <ul>
+              <li>Browse all OPEN jobs with pagination</li>
+              <li>Filter by job type, location, keyword</li>
+              <li>Full-text search with suggestions</li>
+              <li>View company details</li>
+              <li>Save jobs for later</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Job Detail Page (/jobs/[id])</h4>
+            <ul>
+              <li>Full job description and requirements</li>
+              <li>Company information and link</li>
+              <li>Apply button with form</li>
+              <li>Related jobs from same company</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Application Submission Form</h4>
+            <ul>
+              <li>Email collection</li>
+              <li>Resume PDF upload</li>
+              <li>Custom application questions (optional)</li>
+              <li>Form validation and error handling</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Application Status Page (/applications/[id])</h4>
+            <ul>
+              <li>
+                Current stage display (Applied, Screening, Interview, Offer,
+                Hired)
+              </li>
+              <li>Status timeline with stage dates</li>
+              <li>Interview details and schedule (when applicable)</li>
+              <li>Ability to withdraw application</li>
+              <li>Contact recruiter option</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Candidate Dashboard (/dashboard/applications)</h4>
+            <ul>
+              <li>List of all user applications</li>
+              <li>Filter by job or status</li>
+              <li>Quick-view status and next steps</li>
+              <li>Interview schedule for upcoming interviews</li>
+            </ul>
+          </div>
+
+          <h3>💼 Recruiter Pages</h3>
+
+          <div class="page-section">
+            <h4>Jobs Dashboard (/dashboard/jobs)</h4>
+            <ul>
+              <li>List all jobs with status (DRAFT, OPEN, CLOSED)</li>
+              <li>View applicant count per job</li>
+              <li>
+                Stage breakdown (Applied, Screening, Interview, Offer,
+                Rejection)
+              </li>
+              <li>Actions: Edit, Publish, Close, Duplicate, Delete</li>
+              <li>Sort and filter by status or company</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>
+              Create/Edit Job Page (/dashboard/jobs/new,
+              /dashboard/jobs/[id]/edit)
+            </h4>
+            <ul>
+              <li>Job title, description, requirements</li>
+              <li>Location, salary, employment type</li>
+              <li>Custom application questions</li>
+              <li>Status management (DRAFT, OPEN, CLOSED)</li>
+              <li>Rich text editor for description</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Kanban Pipeline Board (/dashboard/pipeline)</h4>
+            <ul>
+              <li>
+                Six-stage Kanban columns (Applied, Screening, Interview, Offer,
+                Hired, Rejected)
+              </li>
+              <li>Candidate cards with basic info (name, job, applied date)</li>
+              <li>Drag-and-drop to move between stages</li>
+              <li>Filter by job or recruiter</li>
+              <li>Bulk actions (reject, schedule, note)</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Application Detail Page (/dashboard/applications/[id])</h4>
+            <ul>
+              <li>Full candidate profile (name, email, phone, location)</li>
+              <li>Resume preview/download</li>
+              <li>Application answers to custom questions</li>
+              <li>Current stage and date applied</li>
+              <li>
+                Action buttons: Stage change, Schedule interview, Reject, Add
+                note
+              </li>
+              <li>Audit trail/timeline of all stage changes</li>
+              <li>Interview details if scheduled</li>
+              <li>Internal notes editor</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>
+              Interview Scheduling (/dashboard/applications/[id]/interview)
+            </h4>
+            <ul>
+              <li>Create interview form (type, date, time, location/link)</li>
+              <li>Schedule with calendar integration (optional)</li>
+              <li>Send automatically generated invite email</li>
+              <li>Multiple interview slots for rescheduling</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Recruiter Analytics (/dashboard/analytics)</h4>
+            <ul>
+              <li>Conversion funnel chart (Applied → Hired)</li>
+              <li>Average time-to-hire by job</li>
+              <li>Average stage duration</li>
+              <li>Applicant count trend (weekly/monthly)</li>
+              <li>Source attribution (if present)</li>
+            </ul>
+          </div>
+
+          <h3>🔐 Auth Pages</h3>
+
+          <div class="page-section">
+            <h4>Login Page (/auth/login)</h4>
+            <ul>
+              <li>OAuth sign-in buttons (Google, GitHub)</li>
+              <li>Magic link email option</li>
+              <li>Redirect to dashboard on success</li>
+              <li>First-time role selection</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Register Page (/auth/register)</h4>
+            <ul>
+              <li>Email and password (optional)</li>
+              <li>Role selection (ADMIN, RECRUITER, CANDIDATE)</li>
+              <li>Company details for recruiters</li>
+              <li>Terms acceptance</li>
+            </ul>
+          </div>
+
+          <h3>👨‍💼 Admin Pages</h3>
+
+          <div class="page-section">
+            <h4>Admin Dashboard (/admin/dashboard)</h4>
+            <ul>
+              <li>Platform statistics (total users, jobs, applications)</li>
+              <li>Queue health (pending/failed jobs)</li>
+              <li>Email delivery status</li>
+              <li>Active companies and recruiters</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>User Management (/admin/users)</h4>
+            <ul>
+              <li>List all users with role and company</li>
+              <li>Edit user roles</li>
+              <li>Deactivate/delete users</li>
+              <li>Search and filter users</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Company Management (/admin/companies)</h4>
+            <ul>
+              <li>List all companies on platform</li>
+              <li>View company stats (jobs posted, applications)</li>
+              <li>Manage company details</li>
+              <li>View associated recruiters</li>
+            </ul>
+          </div>
+
+          <div class="page-section">
+            <h4>Queue Monitor (/admin/queue)</h4>
+            <ul>
+              <li>View all background jobs (pending, completed, failed)</li>
+              <li>Retry failed jobs</li>
+              <li>View job logs and error details</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Data Model -->
+        <div class="section" id="datamodel">
+          <h2>5. Data Model</h2>
+
+          <p>
+            All tables use UUID primary keys. Timestamps are timezone-aware
+            where relevant. Foreign keys are explicit. Soft deletes are
+            represented by nullable <code>deleted_at</code>.
+          </p>
+
+          <table>
+            <tr>
+              <th>Table</th>
+              <th>Core Columns</th>
+              <th>Purpose</th>
+            </tr>
+            <tr>
+              <td><strong>users</strong></td>
+              <td>id, email, role, deleted_at</td>
+              <td>User accounts and roles</td>
+            </tr>
+            <tr>
+              <td><strong>companies</strong></td>
+              <td>id, owner_id, name, slug</td>
+              <td>Company profile</td>
+            </tr>
+            <tr>
+              <td><strong>jobs</strong></td>
+              <td>id, company_id, status, deleted_at</td>
+              <td>Job listings</td>
+            </tr>
+            <tr>
+              <td><strong>applications</strong></td>
+              <td>id, job_id, candidate_id, current_stage</td>
+              <td>Candidate-job relationships</td>
+            </tr>
+            <tr>
+              <td><strong>audit_logs</strong></td>
+              <td>id, application_id, from_stage, to_stage, changed_by</td>
+              <td>Immutable change history</td>
+            </tr>
+            <tr>
+              <td><strong>interviews</strong></td>
+              <td>id, application_id, scheduled_at, reminder_sent</td>
+              <td>Interview scheduling records</td>
+            </tr>
+            <tr>
+              <td><strong>interview_slots</strong></td>
+              <td>id, application_id, proposed_at, status</td>
+              <td>Reschedule/proposal slots</td>
+            </tr>
+            <tr>
+              <td><strong>application_notes</strong></td>
+              <td>id, application_id, author_id, body</td>
+              <td>Internal recruiter notes</td>
+            </tr>
+            <tr>
+              <td><strong>email_logs</strong></td>
+              <td>id, to_email, template, status, sent_at</td>
+              <td>Delivery and troubleshooting logs</td>
+            </tr>
+          </table>
+
+          <div class="info-box">
+            <strong>Design Decisions:</strong>
+            <ul style="margin-bottom: 0">
+              <li>
+                UUID primary keys to avoid enumeration and support distributed
+                systems.
+              </li>
+              <li>Soft delete strategy for recoverability and auditability.</li>
+              <li>Append-only audit logs as source of truth for analytics.</li>
+              <li>
+                <code>reminder_sent</code> flag to avoid duplicate reminders.
+              </li>
+              <li>
+                Parsed resume text is populated asynchronously by workers.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Non-Functional Requirements -->
+        <div class="section" id="nfr">
+          <h2>6. Non-Functional Requirements</h2>
+
+          <table>
+            <tr>
+              <th>Requirement</th>
+              <th>Description</th>
+              <th>Priority</th>
+            </tr>
+            <tr>
+              <td><strong>Performance</strong></td>
+              <td>
+                Job listing API under 200 ms with cache; indexed FK columns
+              </td>
+              <td><span class="priority-must">Must Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Security</strong></td>
+              <td>
+                Auth checks on all protected APIs; strict request validation
+              </td>
+              <td><span class="priority-must">Must Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Reliability</strong></td>
+              <td>Queue retries with exponential backoff and DLQ handling</td>
+              <td><span class="priority-must">Must Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Observability</strong></td>
+              <td>Structured logs and runtime error monitoring</td>
+              <td><span class="priority-should">Should Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Scalability</strong></td>
+              <td>Independent worker process for horizontal scaling</td>
+              <td><span class="priority-should">Should Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Accessibility</strong></td>
+              <td>Keyboard support and WCAG AA compliance target</td>
+              <td><span class="priority-should">Should Have</span></td>
+            </tr>
+            <tr>
+              <td><strong>Data Integrity</strong></td>
+              <td>Transactional multi-step writes</td>
+              <td><span class="priority-must">Must Have</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 6. Technology Stack -->
+        <div class="section" id="stack">
+          <h2>7. Technology Stack</h2>
+
+          <table>
+            <tr>
+              <th>Layer</th>
+              <th>Technology</th>
+              <th>Rationale</th>
+            </tr>
+            <tr>
+              <td><strong>Frontend</strong></td>
+              <td>Next.js 14 (App Router), Tailwind CSS</td>
+              <td>Fast iteration with server/client rendering support</td>
+            </tr>
+            <tr>
+              <td><strong>Language</strong></td>
+              <td>TypeScript (strict)</td>
+              <td>End-to-end type safety</td>
+            </tr>
+            <tr>
+              <td><strong>Database</strong></td>
+              <td>PostgreSQL + Drizzle ORM</td>
+              <td>Relational integrity with typed query APIs</td>
+            </tr>
+            <tr>
+              <td><strong>Migrations</strong></td>
+              <td>drizzle-kit</td>
+              <td>Versioned schema migrations</td>
+            </tr>
+            <tr>
+              <td><strong>Auth</strong></td>
+              <td>NextAuth v5</td>
+              <td>OAuth and session workflows</td>
+            </tr>
+            <tr>
+              <td><strong>Validation</strong></td>
+              <td>Zod</td>
+              <td>Shared client/server schemas</td>
+            </tr>
+            <tr>
+              <td><strong>Queue + Cache</strong></td>
+              <td>Redis + BullMQ</td>
+              <td>Async jobs, rate limits, caching</td>
+            </tr>
+            <tr>
+              <td><strong>Scheduling</strong></td>
+              <td>node-cron</td>
+              <td>Lightweight recurring jobs</td>
+            </tr>
+            <tr>
+              <td><strong>Email</strong></td>
+              <td>Resend or Nodemailer</td>
+              <td>Transactional email delivery</td>
+            </tr>
+            <tr>
+              <td><strong>Storage</strong></td>
+              <td>Supabase Storage or local disk</td>
+              <td>Resume asset storage</td>
+            </tr>
+            <tr>
+              <td><strong>Logging</strong></td>
+              <td>Pino</td>
+              <td>Structured logging</td>
+            </tr>
+            <tr>
+              <td><strong>Monitoring</strong></td>
+              <td>Sentry</td>
+              <td>Error and exception tracking</td>
+            </tr>
+            <tr>
+              <td><strong>Resume Parsing</strong></td>
+              <td>pdf-parse</td>
+              <td>Background extraction of resume text</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 7. Delivery Plan -->
+        <div class="section" id="delivery">
+          <h2>8. Recommended Delivery Plan</h2>
+
+          <table>
+            <tr>
+              <th>Phase</th>
+              <th>Name</th>
+              <th>Scope</th>
+              <th>Outcome</th>
+            </tr>
+            <tr>
+              <td><strong>1</strong></td>
+              <td>Foundation</td>
+              <td>Setup, auth, RBAC, DB migrations</td>
+              <td>Secure baseline architecture</td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>Core Domain</td>
+              <td>Companies, jobs, applications, upload</td>
+              <td>End-to-end hiring flow</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>Pipeline</td>
+              <td>Kanban board and audit log state transitions</td>
+              <td>Recruiter workflow maturity</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>Automation</td>
+              <td>Queues, cron, reminders, rate limiting</td>
+              <td>Operational reliability</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>Intelligence</td>
+              <td>Search, analytics, admin observability</td>
+              <td>Data-driven hiring insights</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Summary -->
+        <div class="section">
+          <h2>Summary</h2>
+          <p>
+            HireTrack is designed as a scalable, type-safe, full-stack ATS
+            platform for small to mid-size companies. The feature set is
+            organized into functional domains (authentication, job management,
+            applications, interviews, email, search, analytics) and distributed
+            across user-facing pages with clear role-based separation of
+            concerns.
+          </p>
+          <p>
+            The technology stack emphasizes TypeScript for safety, PostgreSQL +
+            Drizzle for data integrity, and Redis + BullMQ for reliable
+            background job processing.
+          </p>
+          <p>
+            The delivery plan is phased to establish a secure foundation before
+            adding operational features, ensuring each layer is tested and
+            stable before the next phase begins.
+          </p>
+        </div>
+      </div>
+
+      <footer>
+        <p><strong>HireTrack - Product Requirements Document</strong></p>
+        <p>Version 1.0 | Last Updated: April 2026</p>
+        <p>
+          For project structure details, see
+          <code>Folder-Structure.html</code> | For roadmap, see
+          <code>hiretrack_roadmap.html</code>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+import express from "express";
+import { protect, restrictTo } from "../controllers/authController";
+import { getAllInterviews, createInterview, updateInterview, deleteInterview, getInterview, getAllInterviewsByJob, getInterviewsByUserId } from "../controllers/interviewController";
+const router = express.Router();
+router.use(protect, restrictTo("ADMIN", "RECRUITER"));
+router.route("/").get(getAllInterviews);
+router.route("/create").post(createInterview);
+router.route("/user/:userId").get(restrictTo("ADMIN", "CANDIDATE"), getInterviewsByUserId);
+router.route("/job/:jobId").get(restrictTo("ADMIN", "RECRUITER", "CANDIDATE"), getAllInterviewsByJob);
+router.route("/:interviewId").get(getInterview).patch(updateInterview).delete(deleteInterview);
+export default router;  

@@ -1,0 +1,9 @@
+id,name,email,role,password,autoLoginToken,autoLoginTokenExpiry,verification,passwordReset,isVerified,bookmarks,avatar_url,company,created_at,deleted_at
+a0a0a0a0-0000-4000-a000-000000000001,Admin User,admin@example.com,ADMIN,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"[]",https://example.com/avatar1.png,,2026-04-11T08:00:00Z,
+a0a0a0a0-0000-4000-a000-000000000002,Recruiter One,recruiter1@company.com,RECRUITER,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"[]",,c0c0c0c0-1000-4000-a000-000000000001,2026-04-11T08:05:00Z,
+a0a0a0a0-0000-4000-a000-000000000003,Recruiter Two,recruiter2@company.com,RECRUITER,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"[]",,c0c0c0c0-1000-4000-a000-000000000002,2026-04-11T08:10:00Z,
+a0a0a0a0-0000-4000-a000-000000000004,John Candidate,john.candidate@email.com,CANDIDATE,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"["b0b0b0b0-2000-4000-a000-000000000002"]",,,2026-04-11T08:15:00Z,
+a0a0a0a0-0000-4000-a000-000000000005,Jane Candidate,jane.candidate@email.com,CANDIDATE,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"["b0b0b0b0-2000-4000-a000-000000000001","b0b0b0b0-2000-4000-a000-000000000003"]",,,2026-04-11T08:20:00Z,
+a0a0a0a0-0000-4000-a000-000000000006,Bob Smith,bob.smith@email.com,CANDIDATE,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"[]",,,2026-04-11T08:25:00Z,
+a0a0a0a0-0000-4000-a000-000000000007,Alice Jones,alice.jones@email.com,CANDIDATE,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,false,"[]",,,2026-04-11T08:30:00Z,
+a0a0a0a0-0000-4000-a000-000000000008,David Lee,david.lee@email.com,CANDIDATE,$2b$10$hashedpassword,,,{"code":123456,"expiry":"2026-04-18T10:00:00Z"},,true,"[]",,,2026-04-11T08:35:00Z,

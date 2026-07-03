@@ -1,0 +1,6 @@
+id,owner_id,name,description,slug,created_at,deleted_at,logo_url
+c0c0c0c0-1000-4000-a000-000000000001,a0a0a0a0-0000-4000-a000-000000000002,Tech Innovators Inc.,Leading software development company,tech-innovators,2026-04-11T08:00:00Z,,https://example.com/logo1.png
+c0c0c0c0-1000-4000-a000-000000000002,a0a0a0a0-0000-4000-a000-000000000003,Data Systems LLC,Big data and analytics firm,data-systems,2026-04-11T08:05:00Z,,https://example.com/logo2.png
+c0c0c0c0-1000-4000-a000-000000000003,a0a0a0a0-0000-4000-a000-000000000002,Creative Solutions,Agency for creative professionals,creative-solutions,2026-04-11T08:10:00Z,,https://example.com/logo3.png
+c0c0c0c0-1000-4000-a000-000000000004,a0a0a0a0-0000-4000-a000-000000000001,Admin Corp,Internal admin company,admin-corp,2026-04-11T08:15:00Z,,
+c0c0c0c0-1000-4000-a000-000000000005,a0a0a0a0-0000-4000-a000-000000000003,Finance Hub,Financial services and consulting,finance-hub,2026-04-11T08:20:00Z,,
