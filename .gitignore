@@ -1,3 +1,64 @@
-node_modules
-.env.local
+# Dependencies
+node_modules/
+/jspm_packages/
+.pnp
+.pnp.js
+.yarn-integrity
+
+# Next.js Build Outputs (Frontend)
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/next-env.d.ts
+
+# Backend/Drizzle build & database caches
+dist/
+build/
+*.tsbuildinfo
+
+# Environmental variables & secrets
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production
+*.env
+.env.*
+backend/.env.local
+frontend/.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and text editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.settings/
+
+# Local custom ignore preferences
+drizzle
+misc
